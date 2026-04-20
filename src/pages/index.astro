@@ -1,0 +1,175 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SearchBar from '../components/SearchBar.astro';
+import MovieGrid from '../components/MovieGrid.astro';
+import Loader from '../components/Loader.astro';
+---
+
+<BaseLayout title="CineCerca - Busca peliculas en cines cercanos">
+  <section class="hero">
+    <div class="container">
+      <h1 class="hero__title">Encontra la pelicula perfecta cerca tuyo</h1>
+      <p class="hero__subtitle">Busca una pelicula y descubri en que cines de tu zona se proyecta, con horarios y ubicacion.</p>
+      <div class="hero__search">
+        <SearchBar autofocus />
+      </div>
+    </div>
+  </section>
+
+  <section class="trending container">
+    <h2>Tendencias de la semana</h2>
+    <div id="trending-slot">
+      <Loader label="Cargando tendencias..." />
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .hero {
+    padding: 3rem 0 2rem;
+    text-align: center;
+    background: linear-gradient(180deg, rgba(229, 9, 20, 0.12), transparent 60%);
+  }
+
+  .hero__title {
+    margin-bottom: 0.75rem;
+  }
+
+  .hero__subtitle {
+    color: var(--color-text-soft);
+    max-width: 560px;
+    margin: 0 auto 2rem;
+    font-size: 1.05rem;
+  }
+
+  .hero__search {
+    display: flex;
+    justify-content: center;
+    padding: 0 1rem;
+  }
+
+  .trending {
+    padding: 2rem 1rem 3rem;
+  }
+
+  .trending h2 { margin-bottom: 1.5rem; }
+</style>
+
+<script>
+  import { getTrending, getPosterUrl } from '../scripts/api.js';
+  import { formatYear, formatRating } from '../utils/formatters.js';
+  import { isFavorite, toggleFavorite } from '../scripts/favorites.js';
+
+  const slot = document.getElementById('trending-slot');
+
+  function renderError(msg) {
+    slot.innerHTML = `
+      <div class="error-inline">
+        <p>⚠️ ${msg}</p>
+        <button class="btn btn-ghost" onclick="location.reload()">Reintentar</button>
+      </div>`;
+  }
+
+  function renderMovies(movies) {
+    const grid = document.createElement('div');
+    grid.className = 'movie-grid';
+    grid.innerHTML = movies.map((m) => `
+      <article class="movie-card" data-id="${m.id}">
+        <a href="/pelicula?id=${m.id}" class="movie-card__link">
+          <div class="movie-card__poster">
+            <img src="${getPosterUrl(m.poster_path, 'w342')}" alt="Poster de ${m.title}" loading="lazy" />
+            ${m.vote_average ? `<span class="movie-card__rating">⭐ ${formatRating(m.vote_average)}</span>` : ''}
+          </div>
+          <div class="movie-card__body">
+            <h3 class="movie-card__title">${m.title}</h3>
+            <p class="movie-card__year">${formatYear(m.release_date)}</p>
+          </div>
+        </a>
+        <button class="movie-card__fav" data-fav-btn data-movie-id="${m.id}" aria-label="Favorito">
+          <span data-fav-icon>${isFavorite(m.id) ? '❤️' : '🤍'}</span>
+        </button>
+      </article>
+    `).join('');
+
+    slot.innerHTML = '';
+    slot.appendChild(grid);
+    wireFavorites(movies);
+  }
+
+  function wireFavorites(movies) {
+    document.querySelectorAll('[data-fav-btn]').forEach((btn) => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        const id = Number(btn.getAttribute('data-movie-id'));
+        const movie = movies.find((m) => Number(m.id) === id);
+        if (!movie) return;
+        toggleFavorite(movie);
+        const icon = btn.querySelector('[data-fav-icon]');
+        icon.textContent = isFavorite(id) ? '❤️' : '🤍';
+      });
+    });
+  }
+
+  getTrending()
+    .then((data) => {
+      if (!data.results?.length) {
+        slot.innerHTML = '<p class="text-muted">No hay tendencias disponibles.</p>';
+        return;
+      }
+      renderMovies(data.results.slice(0, 10));
+    })
+    .catch((err) => {
+      console.error(err);
+      renderError(err.message || 'No pudimos cargar las tendencias.');
+    });
+</script>
+
+<style is:global>
+  .movie-grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media (min-width: 560px) { .movie-grid { grid-template-columns: repeat(3, 1fr); } }
+  @media (min-width: 900px) { .movie-grid { grid-template-columns: repeat(4, 1fr); } }
+  @media (min-width: 1200px) { .movie-grid { grid-template-columns: repeat(5, 1fr); } }
+
+  .movie-card {
+    position: relative;
+    background-color: var(--color-surface);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    transition: transform var(--transition-base), box-shadow var(--transition-base);
+    border: 1px solid var(--color-border);
+  }
+  .movie-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+  .movie-card__link { display: block; color: inherit; }
+  .movie-card__poster { position: relative; aspect-ratio: 2/3; background-color: var(--color-bg-elevated); }
+  .movie-card__poster img { width: 100%; height: 100%; object-fit: cover; }
+  .movie-card__rating {
+    position: absolute; top: 0.5rem; left: 0.5rem;
+    background-color: rgba(0,0,0,0.75); color: var(--color-accent);
+    font-size: 0.75rem; font-weight: 600; padding: 0.25rem 0.5rem;
+    border-radius: var(--radius-sm);
+  }
+  .movie-card__body { padding: 0.75rem; }
+  .movie-card__title {
+    font-size: 0.95rem; font-weight: 600; margin: 0 0 0.25rem 0;
+    display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
+  }
+  .movie-card__year { font-size: 0.8rem; color: var(--color-text-muted); margin: 0; }
+  .movie-card__fav {
+    position: absolute; top: 0.5rem; right: 0.5rem;
+    background-color: rgba(0,0,0,0.7); border-radius: 999px;
+    width: 36px; height: 36px; display: grid; place-items: center;
+    font-size: 1.1rem; transition: transform var(--transition-fast);
+  }
+  .movie-card__fav:hover { transform: scale(1.1); }
+
+  .error-inline {
+    text-align: center;
+    padding: 2rem 1rem;
+    color: var(--color-text-muted);
+  }
+</style>

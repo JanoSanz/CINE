@@ -1,0 +1,144 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Cines - CineCerca">
+  <div class="container page">
+    <h1 class="page-title">Cines</h1>
+    <p class="text-muted page-sub">Listado de cines disponibles. Usa el selector de zona en el header para filtrar.</p>
+
+    <div class="actions">
+      <button id="geo-btn" class="btn btn-ghost">📍 Ordenar por cercania</button>
+    </div>
+
+    <div id="cinemas-slot">
+      <div class="loader" role="status">
+        <div class="loader__spinner" aria-hidden="true"></div>
+        <p class="loader__label">Cargando cines...</p>
+      </div>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .page-sub { margin-bottom: 1.5rem; }
+  .actions { margin-bottom: 1.5rem; display: flex; gap: 0.5rem; flex-wrap: wrap; }
+
+  .loader {
+    display: flex; flex-direction: column; align-items: center;
+    gap: 1rem; padding: 3rem 1rem;
+  }
+  .loader__spinner {
+    width: 40px; height: 40px;
+    border: 3px solid var(--color-border);
+    border-top-color: var(--color-primary);
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+  }
+  .loader__label { color: var(--color-text-muted); margin: 0; font-size: 0.9rem; }
+  @keyframes spin { to { transform: rotate(360deg); } }
+</style>
+
+<script>
+  import { getCinemasByZone } from '../scripts/cinemas.js';
+  import { get } from '../scripts/storage.js';
+  import { getUserPosition, sortByDistance } from '../scripts/geolocation.js';
+  import { formatDistance } from '../utils/formatters.js';
+
+  const slot = document.getElementById('cinemas-slot');
+  const geoBtn = document.getElementById('geo-btn');
+  let currentCinemas = [];
+  let userPos = null;
+
+  function escapeHtml(str) {
+    return String(str ?? '').replace(/[&<>"']/g, (c) => ({
+      '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+    })[c]);
+  }
+
+  function render(cinemas) {
+    if (!cinemas.length) {
+      slot.innerHTML = `
+        <div class="empty">
+          <span class="empty__icon">🏚️</span>
+          <h3>No hay cines en esta zona</h3>
+          <p class="text-muted">Probá cambiando la zona desde el header.</p>
+        </div>`;
+      return;
+    }
+
+    slot.innerHTML = `
+      <div class="cinema-list">
+        ${cinemas.map((c) => `
+          <article class="cinema-card">
+            <header class="cinema-card__header">
+              <div>
+                <h3 class="cinema-card__name">${escapeHtml(c.nombre)}</h3>
+                <p class="cinema-card__address">${escapeHtml(c.direccion)}, ${escapeHtml(c.ciudad)}</p>
+                <p class="cinema-card__zone text-muted">Zona: ${escapeHtml(c.zona)} · ${c.salas} salas</p>
+              </div>
+              ${c.distanceKm != null ? `<span class="cinema-card__distance">📍 ${formatDistance(c.distanceKm)}</span>` : ''}
+            </header>
+            ${c.telefono ? `<p class="text-muted">📞 ${escapeHtml(c.telefono)}</p>` : ''}
+          </article>
+        `).join('')}
+      </div>
+    `;
+  }
+
+  async function load() {
+    try {
+      const zone = get('zona', '');
+      currentCinemas = await getCinemasByZone(zone);
+      if (userPos) currentCinemas = sortByDistance(currentCinemas, userPos);
+      render(currentCinemas);
+    } catch (err) {
+      console.error(err);
+      slot.innerHTML = `
+        <div class="error-box">
+          <p>⚠️ No pudimos cargar los cines.</p>
+          <button class="btn btn-ghost" onclick="location.reload()">Reintentar</button>
+        </div>`;
+    }
+  }
+
+  geoBtn.addEventListener('click', async () => {
+    geoBtn.disabled = true;
+    geoBtn.textContent = '📍 Obteniendo ubicacion...';
+    try {
+      userPos = await getUserPosition();
+      currentCinemas = sortByDistance(currentCinemas, userPos);
+      render(currentCinemas);
+      geoBtn.textContent = '📍 Ordenado por cercania';
+    } catch (err) {
+      console.error(err);
+      geoBtn.textContent = '📍 No pudimos acceder a tu ubicacion';
+      setTimeout(() => { geoBtn.disabled = false; geoBtn.textContent = '📍 Ordenar por cercania'; }, 2500);
+    }
+  });
+
+  window.addEventListener('zone:change', load);
+  load();
+</script>
+
+<style is:global>
+  .cinema-list {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr;
+  }
+  @media (min-width: 768px) {
+    .cinema-list { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  .cinema-card__zone { margin: 0.25rem 0 0 0; font-size: 0.8rem; }
+  .cinema-card__distance {
+    font-size: 0.8rem;
+    color: var(--color-text-soft);
+    white-space: nowrap;
+    background-color: var(--color-bg-elevated);
+    padding: 0.25rem 0.5rem;
+    border-radius: var(--radius-sm);
+    height: fit-content;
+  }
+</style>

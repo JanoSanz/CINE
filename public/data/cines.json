@@ -1,0 +1,104 @@
+{
+  "cines": [
+    {
+      "id": "cin-001",
+      "nombre": "Hoyts Abasto",
+      "ciudad": "Buenos Aires",
+      "zona": "CABA",
+      "direccion": "Av. Corrientes 3247",
+      "coordenadas": { "lat": -34.6038, "lng": -58.4106 },
+      "telefono": "+54 11 4959-3400",
+      "salas": 12
+    },
+    {
+      "id": "cin-002",
+      "nombre": "Cinepolis Recoleta",
+      "ciudad": "Buenos Aires",
+      "zona": "CABA",
+      "direccion": "Vicente Lopez 2050",
+      "coordenadas": { "lat": -34.5875, "lng": -58.3927 },
+      "telefono": "+54 11 4806-1000",
+      "salas": 10
+    },
+    {
+      "id": "cin-003",
+      "nombre": "Cinemark Palermo",
+      "ciudad": "Buenos Aires",
+      "zona": "CABA",
+      "direccion": "Beruti 3399",
+      "coordenadas": { "lat": -34.5847, "lng": -58.4098 },
+      "telefono": "+54 11 4827-9500",
+      "salas": 8
+    },
+    {
+      "id": "cin-004",
+      "nombre": "Showcase Belgrano",
+      "ciudad": "Buenos Aires",
+      "zona": "CABA",
+      "direccion": "Monroe 1655",
+      "coordenadas": { "lat": -34.5626, "lng": -58.4580 },
+      "telefono": "+54 11 4788-3300",
+      "salas": 9
+    },
+    {
+      "id": "cin-005",
+      "nombre": "Hoyts Unicenter",
+      "ciudad": "Martinez",
+      "zona": "Zona Norte",
+      "direccion": "Paraná 3745",
+      "coordenadas": { "lat": -34.5108, "lng": -58.5243 },
+      "telefono": "+54 11 4733-1234",
+      "salas": 16
+    },
+    {
+      "id": "cin-006",
+      "nombre": "Cinemark San Justo",
+      "ciudad": "San Justo",
+      "zona": "Zona Oeste",
+      "direccion": "Av. Brigadier Juan M. de Rosas 3910",
+      "coordenadas": { "lat": -34.6783, "lng": -58.5612 },
+      "telefono": "+54 11 4484-5000",
+      "salas": 10
+    },
+    {
+      "id": "cin-007",
+      "nombre": "Showcase Quilmes",
+      "ciudad": "Quilmes",
+      "zona": "Zona Sur",
+      "direccion": "Av. Calchaquí 3950",
+      "coordenadas": { "lat": -34.7406, "lng": -58.2745 },
+      "telefono": "+54 11 4270-8000",
+      "salas": 14
+    },
+    {
+      "id": "cin-008",
+      "nombre": "Cinepolis Avellaneda",
+      "ciudad": "Avellaneda",
+      "zona": "Zona Sur",
+      "direccion": "Guemes 897",
+      "coordenadas": { "lat": -34.6625, "lng": -58.3650 },
+      "telefono": "+54 11 4203-1500",
+      "salas": 8
+    },
+    {
+      "id": "cin-009",
+      "nombre": "Cinemark Nuevo Centro",
+      "ciudad": "Cordoba",
+      "zona": "Cordoba",
+      "direccion": "Av. Duarte Quiros 1400",
+      "coordenadas": { "lat": -31.4134, "lng": -64.2014 },
+      "telefono": "+54 351 489-1000",
+      "salas": 10
+    },
+    {
+      "id": "cin-010",
+      "nombre": "Showcase Rosario",
+      "ciudad": "Rosario",
+      "zona": "Rosario",
+      "direccion": "Av. Eva Peron 5856",
+      "coordenadas": { "lat": -32.9634, "lng": -60.6505 },
+      "telefono": "+54 341 430-8800",
+      "salas": 12
+    }
+  ]
+}

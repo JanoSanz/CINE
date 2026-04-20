@@ -1,0 +1,43 @@
+---
+const {
+  title = 'Algo salio mal',
+  message = 'No pudimos cargar los datos. Intenta nuevamente.',
+  showRetry = true
+} = Astro.props;
+---
+
+<div class="error-box" role="alert">
+  <span class="error-box__icon" aria-hidden="true">⚠️</span>
+  <h3 class="error-box__title">{title}</h3>
+  <p class="error-box__message">{message}</p>
+  {showRetry && (
+    <button class="btn btn-ghost" data-retry>Reintentar</button>
+  )}
+</div>
+
+<style>
+  .error-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 2.5rem 1rem;
+    text-align: center;
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+  }
+
+  .error-box__icon { font-size: 2rem; }
+  .error-box__title { margin: 0; }
+  .error-box__message {
+    color: var(--color-text-muted);
+    margin: 0 0 1rem 0;
+  }
+</style>
+
+<script>
+  document.querySelectorAll('[data-retry]').forEach((btn) => {
+    btn.addEventListener('click', () => window.location.reload());
+  });
+</script>

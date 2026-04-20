@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 342 513">
+  <rect width="342" height="513" fill="#1f232c"/>
+  <g transform="translate(171 220)" text-anchor="middle" font-family="system-ui, sans-serif" fill="#9aa3b2">
+    <text font-size="64" y="0">🎬</text>
+    <text font-size="22" font-weight="600" y="70" fill="#c7cdd8">Sin poster</text>
+    <text font-size="14" y="100">disponible</text>
+  </g>
+</svg>

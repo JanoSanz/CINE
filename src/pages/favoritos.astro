@@ -1,0 +1,84 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Favoritos - CineCerca">
+  <div class="container page">
+    <h1 class="page-title">Tus favoritos</h1>
+    <p class="text-muted">Peliculas que guardaste en este dispositivo.</p>
+
+    <div id="favs-slot"></div>
+  </div>
+</BaseLayout>
+
+<script>
+  import { getFavorites, removeFavorite } from '../scripts/favorites.js';
+  import { getPosterUrl } from '../scripts/api.js';
+  import { formatYear, formatRating } from '../utils/formatters.js';
+
+  const slot = document.getElementById('favs-slot');
+
+  function escapeHtml(str) {
+    return String(str ?? '').replace(/[&<>"']/g, (c) => ({
+      '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+    })[c]);
+  }
+
+  function render() {
+    const favs = getFavorites();
+    if (!favs.length) {
+      slot.innerHTML = `
+        <div class="empty">
+          <span class="empty__icon">💔</span>
+          <h3>Aun no tenes favoritos</h3>
+          <p class="text-muted">Buscá peliculas y tocá el corazón para guardarlas aquí.</p>
+          <a class="btn btn-primary" href="/">Explorar peliculas</a>
+        </div>`;
+      return;
+    }
+
+    slot.innerHTML = `
+      <div class="movie-grid">
+        ${favs.map((m) => `
+          <article class="movie-card" data-id="${m.id}">
+            <a href="/pelicula?id=${m.id}" class="movie-card__link">
+              <div class="movie-card__poster">
+                <img src="${getPosterUrl(m.poster_path, 'w342')}" alt="Poster de ${escapeHtml(m.title)}" loading="lazy" />
+                ${m.vote_average ? `<span class="movie-card__rating">⭐ ${formatRating(m.vote_average)}</span>` : ''}
+              </div>
+              <div class="movie-card__body">
+                <h3 class="movie-card__title">${escapeHtml(m.title)}</h3>
+                <p class="movie-card__year">${formatYear(m.release_date)}</p>
+              </div>
+            </a>
+            <button class="movie-card__fav" data-remove data-movie-id="${m.id}" aria-label="Quitar de favoritos">
+              <span>❤️</span>
+            </button>
+          </article>
+        `).join('')}
+      </div>
+    `;
+
+    document.querySelectorAll('[data-remove]').forEach((btn) => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        removeFavorite(btn.getAttribute('data-movie-id'));
+        render();
+      });
+    });
+  }
+
+  render();
+</script>
+
+<style is:global>
+  .movie-grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media (min-width: 560px) { .movie-grid { grid-template-columns: repeat(3, 1fr); } }
+  @media (min-width: 900px) { .movie-grid { grid-template-columns: repeat(4, 1fr); } }
+  @media (min-width: 1200px) { .movie-grid { grid-template-columns: repeat(5, 1fr); } }
+</style>

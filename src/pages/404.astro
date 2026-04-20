@@ -1,0 +1,33 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Pagina no encontrada - CineCerca">
+  <div class="container page">
+    <div class="notfound">
+      <span class="notfound__code">404</span>
+      <h1>Esta pagina no existe</h1>
+      <p class="text-muted">El link que seguiste no funciona o la pagina fue movida.</p>
+      <a class="btn btn-primary" href="/">Volver al inicio</a>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .notfound {
+    text-align: center;
+    padding: 4rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .notfound__code {
+    font-size: 6rem;
+    font-weight: 800;
+    color: var(--color-primary);
+    line-height: 1;
+    letter-spacing: -0.05em;
+  }
+</style>

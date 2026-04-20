@@ -1,0 +1,151 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SearchBar from '../components/SearchBar.astro';
+---
+
+<BaseLayout title="Buscar peliculas - CineCerca">
+  <div class="container page">
+    <div class="search-header">
+      <SearchBar />
+    </div>
+
+    <h1 id="results-title" class="page-title">Resultados</h1>
+
+    <div id="results-slot">
+      <div class="loader" role="status">
+        <div class="loader__spinner" aria-hidden="true"></div>
+        <p class="loader__label">Buscando...</p>
+      </div>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .search-header {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+  }
+
+  .loader {
+    display: flex; flex-direction: column; align-items: center;
+    gap: 1rem; padding: 3rem 1rem;
+  }
+  .loader__spinner {
+    width: 40px; height: 40px;
+    border: 3px solid var(--color-border);
+    border-top-color: var(--color-primary);
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+  }
+  .loader__label { color: var(--color-text-muted); margin: 0; font-size: 0.9rem; }
+  @keyframes spin { to { transform: rotate(360deg); } }
+</style>
+
+<script>
+  import { searchMovies, getPosterUrl } from '../scripts/api.js';
+  import { formatYear, formatRating } from '../utils/formatters.js';
+  import { isFavorite, toggleFavorite } from '../scripts/favorites.js';
+
+  const params = new URLSearchParams(window.location.search);
+  const query = (params.get('q') || '').trim();
+  const slot = document.getElementById('results-slot');
+  const title = document.getElementById('results-title');
+
+  const input = document.getElementById('search-input');
+  if (input && query) input.value = query;
+
+  if (!query) {
+    title.textContent = 'Buscar peliculas';
+    slot.innerHTML = `
+      <div class="empty">
+        <span class="empty__icon">🔎</span>
+        <h3>Empezá escribiendo</h3>
+        <p class="text-muted">Escribe el nombre de una pelicula en la barra de arriba para buscar.</p>
+      </div>`;
+  } else {
+    title.textContent = `Resultados para "${query}"`;
+    document.title = `${query} - CineCerca`;
+
+    searchMovies(query)
+      .then((data) => {
+        const results = data.results || [];
+        if (!results.length) {
+          slot.innerHTML = `
+            <div class="empty">
+              <span class="empty__icon">🎞️</span>
+              <h3>Sin resultados</h3>
+              <p class="text-muted">No encontramos peliculas para "${query}". Probá con otras palabras.</p>
+            </div>`;
+          return;
+        }
+        renderMovies(results);
+      })
+      .catch((err) => {
+        console.error(err);
+        slot.innerHTML = `
+          <div class="error-inline">
+            <p>⚠️ ${err.message || 'Error al buscar peliculas.'}</p>
+            <button class="btn btn-ghost" onclick="location.reload()">Reintentar</button>
+          </div>`;
+      });
+  }
+
+  function renderMovies(movies) {
+    const grid = document.createElement('div');
+    grid.className = 'movie-grid';
+    grid.innerHTML = movies.map((m) => `
+      <article class="movie-card" data-id="${m.id}">
+        <a href="/pelicula?id=${m.id}" class="movie-card__link">
+          <div class="movie-card__poster">
+            <img src="${getPosterUrl(m.poster_path, 'w342')}" alt="Poster de ${escapeHtml(m.title)}" loading="lazy" />
+            ${m.vote_average ? `<span class="movie-card__rating">⭐ ${formatRating(m.vote_average)}</span>` : ''}
+          </div>
+          <div class="movie-card__body">
+            <h3 class="movie-card__title">${escapeHtml(m.title)}</h3>
+            <p class="movie-card__year">${formatYear(m.release_date)}</p>
+          </div>
+        </a>
+        <button class="movie-card__fav" data-fav-btn data-movie-id="${m.id}" aria-label="Favorito">
+          <span data-fav-icon>${isFavorite(m.id) ? '❤️' : '🤍'}</span>
+        </button>
+      </article>
+    `).join('');
+
+    slot.innerHTML = '';
+    slot.appendChild(grid);
+
+    document.querySelectorAll('[data-fav-btn]').forEach((btn) => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        const id = Number(btn.getAttribute('data-movie-id'));
+        const movie = movies.find((m) => Number(m.id) === id);
+        if (!movie) return;
+        toggleFavorite(movie);
+        btn.querySelector('[data-fav-icon]').textContent = isFavorite(id) ? '❤️' : '🤍';
+      });
+    });
+  }
+
+  function escapeHtml(str) {
+    return String(str || '').replace(/[&<>"']/g, (c) => ({
+      '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+    })[c]);
+  }
+</script>
+
+<style is:global>
+  .empty {
+    text-align: center; padding: 3rem 1rem;
+    display: flex; flex-direction: column; align-items: center; gap: 0.25rem;
+  }
+  .empty__icon { font-size: 3rem; margin-bottom: 0.5rem; }
+  .empty h3 { margin: 0; }
+
+  .error-inline {
+    text-align: center; padding: 3rem 1rem;
+    color: var(--color-text-muted);
+  }
+  .error-inline button { margin-top: 1rem; }
+</style>

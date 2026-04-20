@@ -1,0 +1,110 @@
+---
+import ShowtimeList from './ShowtimeList.astro';
+import { formatDistance } from '../utils/formatters.js';
+
+const { cinema, funciones = [] } = Astro.props;
+---
+
+<article class="cinema-card">
+  <header class="cinema-card__header">
+    <div>
+      <h3 class="cinema-card__name">{cinema.nombre}</h3>
+      <p class="cinema-card__address">{cinema.direccion}, {cinema.ciudad}</p>
+    </div>
+    {cinema.distanceKm != null && (
+      <span class="cinema-card__distance" title="Distancia aproximada">
+        📍 {formatDistance(cinema.distanceKm)}
+      </span>
+    )}
+  </header>
+
+  {funciones.length > 0 ? (
+    <div class="cinema-card__funciones">
+      {funciones.map((fn) => (
+        <div class="funcion-row">
+          <div class="funcion-row__meta">
+            <span class="tag tag--format">{fn.formato}</span>
+            <span class="tag">{fn.idioma}</span>
+          </div>
+          <ShowtimeList horarios={fn.horarios} />
+        </div>
+      ))}
+    </div>
+  ) : (
+    <p class="text-muted">Sin funciones disponibles.</p>
+  )}
+</article>
+
+<style>
+  .cinema-card {
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .cinema-card__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .cinema-card__name {
+    margin: 0 0 0.25rem 0;
+    font-size: 1.05rem;
+  }
+
+  .cinema-card__address {
+    margin: 0;
+    color: var(--color-text-muted);
+    font-size: 0.875rem;
+  }
+
+  .cinema-card__distance {
+    font-size: 0.8rem;
+    color: var(--color-text-soft);
+    white-space: nowrap;
+    background-color: var(--color-bg-elevated);
+    padding: 0.25rem 0.5rem;
+    border-radius: var(--radius-sm);
+  }
+
+  .cinema-card__funciones {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .funcion-row {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding-top: 0.75rem;
+    border-top: 1px solid var(--color-border);
+  }
+
+  .funcion-row__meta {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+
+  .tag {
+    display: inline-block;
+    padding: 0.2rem 0.5rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    background-color: var(--color-bg-elevated);
+    color: var(--color-text-soft);
+    border-radius: var(--radius-sm);
+  }
+
+  .tag--format {
+    background-color: var(--color-primary);
+    color: #fff;
+  }
+</style>
