@@ -142,88 +142,22 @@ cinecerca/
 
 ## Datos
 
-### Peliculas (TMDB)
-
-Las peliculas se consumen en tiempo real desde la [API v3 de TMDB](https://developer.themoviedb.org/reference/intro/getting-started):
-
-- `GET /trending/movie/week` — tendencias en la home
-- `GET /search/movie` — busqueda por titulo
-- `GET /movie/{id}` — detalle completo con videos y creditos
-
-### Cines y funciones (JSON propio)
-
-El dataset esta en `public/data/` con un schema pensado para migrarse facilmente a una API real:
-
-```json
-{
-  "cines": [
-    {
-      "id": "cin-001",
-      "nombre": "Hoyts Abasto",
-      "ciudad": "Buenos Aires",
-      "zona": "CABA",
-      "direccion": "Av. Corrientes 3247",
-      "coordenadas": { "lat": -34.6038, "lng": -58.4106 },
-      "telefono": "+54 11 4959-3400",
-      "salas": 12
-    }
-  ]
-}
-```
-
-```json
-{
-  "funciones": [
-    {
-      "id": "fn-001",
-      "cineId": "cin-001",
-      "peliculaId": 872585,
-      "fecha": "2026-04-20",
-      "horarios": ["14:30", "17:15", "20:00", "22:45"],
-      "formato": "2D",
-      "idioma": "Subtitulada",
-      "precio": 3500
-    }
-  ]
-}
-```
-
-El `peliculaId` matchea el ID interno de TMDB, lo que permite cruzar ambas fuentes sin capas intermedias.
-
-## Rutas
-
-| Ruta | Proposito |
-|---|---|
-| `/` | Home con buscador y peliculas trending |
-| `/buscar?q=titulo` | Resultados de busqueda |
-| `/pelicula?id=872585` | Detalle + cines donde se proyecta |
-| `/cines` | Listado completo de cines (filtrable por zona) |
-| `/favoritos` | Peliculas guardadas en este dispositivo |
-| `/404` | Pagina no encontrada |
-
-Se usan **query strings** en vez de rutas dinamicas para mantener un build 100% estatico y desplegable en cualquier host.
+- **Peliculas:** se consumen desde la API de TMDB.
+- **Cines y funciones:** estan mockeados en `public/data/cines.json` y `public/data/funciones.json` con un formato pensado para que manana se puedan reemplazar por un endpoint real sin cambiar la UI.
 
 ## Deploy
 
 ### Vercel
 
-1. Importar el repo en [vercel.com/new](https://vercel.com/new)
-2. En **Settings > Environment Variables** agregar `PUBLIC_TMDB_API_KEY`
-3. Deploy automatico en cada push a `main`
+1. Conectar el repo en [vercel.com](https://vercel.com).
+2. En Settings > Environment Variables agregar `PUBLIC_TMDB_API_KEY`.
+3. Deploy automatico en cada push a `main`.
 
 ### Netlify
 
-1. Conectar el repo en [app.netlify.com](https://app.netlify.com)
-2. Build command: `npm run build` | Publish directory: `dist`
-3. En **Site settings > Environment variables** agregar `PUBLIC_TMDB_API_KEY`
-
-## Decisiones tecnicas
-
-- **Astro en modo static**: optimo para una app mayormente de lectura. Cada pagina es HTML estatico con islas de JS solo donde hacen falta, lo que da mejor performance que una SPA full-JS.
-- **Query strings en vez de rutas dinamicas**: mantiene el build 100% estatico, sin adapter, deploy-anywhere. Cambio de decision razonable si en v2 se migra a SSR.
-- **JSON en `public/` en vez de endpoints**: permite fetch estandar en el cliente y facilita migrar a una API real reemplazando el URL base.
-- **Sin frameworks de CSS**: los estilos estan en CSS vanilla con custom properties. Mantiene el bundle chico y demuestra conocimiento base sin apoyarse en utilidades.
-- **`PUBLIC_` prefix en la env var**: TMDB v3 permite la key como query param, y dado que este proyecto es estatico sin backend, la key es necesariamente publica. Para un entorno productivo real, la recomendacion es proxyarla desde un serverless function (roadmap v2).
+1. Conectar el repo en [netlify.com](https://netlify.com).
+2. Build command: `npm run build` | Publish directory: `dist`.
+3. Agregar `PUBLIC_TMDB_API_KEY` en Environment variables.
 
 ## Roadmap
 
@@ -244,4 +178,4 @@ MIT
 
 ## Autor
 
-Hecho por [Jano Sanz](https://github.com/tu-usuario). Datos de peliculas provistos por [TMDB](https://www.themoviedb.org/). Este proyecto no esta avalado ni certificado por TMDB.
+Tu nombre aca.
