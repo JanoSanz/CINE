@@ -24,7 +24,10 @@ La app combina una fuente de datos real (TMDB) para la informacion de peliculas 
 - Detalle de pelicula con backdrop, sinopsis y metadata
 - Seleccion de zona persistente (CABA, Zona Norte, Sur, Oeste, Cordoba, Rosario)
 - Listado de cines por pelicula con horarios, formato e idioma
+- **Filtros dinamicos** por formato (2D / 3D / IMAX) e idioma (Subtitulada / Doblada)
+- **Mapa interactivo** con Leaflet y markers por cine (tiles CartoDB que siguen el tema)
 - Geolocalizacion opcional con ordenamiento por cercania (formula de Haversine)
+- **Tema claro / oscuro** con persistencia y sin flash al cargar
 - Favoritos persistidos en localStorage
 - Pagina dedicada de cines y pagina de favoritos
 - Manejo completo de estados: loading, error, empty y success
@@ -42,6 +45,7 @@ La app combina una fuente de datos real (TMDB) para la informacion de peliculas 
 | **Fetch API** | Llamadas a TMDB y a los JSON locales |
 | **localStorage** | Persistencia de favoritos y zona seleccionada |
 | **Geolocation API** | Ubicacion del usuario (opcional) |
+| **Leaflet** | Mapa interactivo con markers (via CDN) |
 | **TMDB API v3** | Datos reales de peliculas |
 | **Vercel / Netlify** | Deploy con CI/CD desde GitHub |
 
@@ -165,9 +169,10 @@ cinecerca/
 - [x] Geolocalizacion con ordenamiento por cercania
 - [x] Persistencia con localStorage
 - [x] Pagina 404 personalizada
-- [ ] Filtros avanzados (genero, formato, idioma, precio)
-- [ ] Mapa embebido con Leaflet
-- [ ] Tema claro / oscuro
+- [x] Filtros dinamicos (formato, idioma) en detalle de pelicula
+- [x] Mapa embebido con Leaflet y tiles adaptativos al tema
+- [x] Tema claro / oscuro con persistencia
+- [ ] Filtros extra (genero, precio, franja horaria)
 - [ ] Proxy de TMDB con Vercel Serverless Functions (ocultar API key)
 - [ ] Migracion del JSON de cines a Supabase
 - [ ] Tests con Vitest

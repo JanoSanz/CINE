@@ -1,0 +1,53 @@
+---
+---
+
+<button
+  id="theme-toggle"
+  class="theme-toggle"
+  type="button"
+  aria-label="Cambiar tema"
+  title="Cambiar tema"
+>
+  <span data-theme-icon>🌙</span>
+</button>
+
+<style>
+  .theme-toggle {
+    width: 40px;
+    height: 40px;
+    display: grid;
+    place-items: center;
+    border-radius: 999px;
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    font-size: 1.1rem;
+    transition: background-color var(--transition-fast), transform var(--transition-fast);
+  }
+
+  .theme-toggle:hover {
+    background-color: var(--color-bg-elevated);
+    transform: scale(1.05);
+  }
+</style>
+
+<script>
+  import { get, set } from '../scripts/storage.js';
+
+  const KEY = 'theme';
+  const btn = document.getElementById('theme-toggle');
+  const icon = btn?.querySelector('[data-theme-icon]');
+
+  function apply(theme) {
+    document.documentElement.dataset.theme = theme;
+    if (icon) icon.textContent = theme === 'dark' ? '🌙' : '☀️';
+  }
+
+  apply(get(KEY, 'dark'));
+
+  btn?.addEventListener('click', () => {
+    const current = document.documentElement.dataset.theme || 'dark';
+    const next = current === 'dark' ? 'light' : 'dark';
+    set(KEY, next);
+    apply(next);
+  });
+</script>

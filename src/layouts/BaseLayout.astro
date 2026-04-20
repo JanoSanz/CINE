@@ -23,6 +23,18 @@ const { title = 'CineCerca', description = 'Busca peliculas y encontra en que ci
     <link rel="preconnect" href="https://api.themoviedb.org" />
 
     <title>{title}</title>
+
+    <script is:inline>
+      (function () {
+        try {
+          const saved = localStorage.getItem('cinecerca:theme');
+          const theme = saved ? JSON.parse(saved) : 'dark';
+          document.documentElement.dataset.theme = theme;
+        } catch (e) {
+          document.documentElement.dataset.theme = 'dark';
+        }
+      })();
+    </script>
   </head>
   <body>
     <Header />

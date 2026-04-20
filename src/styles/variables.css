@@ -1,4 +1,5 @@
-:root {
+:root,
+[data-theme="dark"] {
   --color-bg: #0f1115;
   --color-bg-elevated: #171a21;
   --color-surface: #1f232c;
@@ -12,6 +13,31 @@
   --color-primary-hover: #ff1a25;
   --color-accent: #f5c518;
 
+  --color-header-bg: rgba(15, 17, 21, 0.85);
+  --color-hero-gradient: linear-gradient(180deg, rgba(229, 9, 20, 0.12), transparent 60%);
+  --color-backdrop-overlay: linear-gradient(180deg, rgba(15, 17, 21, 0.4), rgba(15, 17, 21, 1));
+}
+
+[data-theme="light"] {
+  --color-bg: #f6f7fa;
+  --color-bg-elevated: #ffffff;
+  --color-surface: #ffffff;
+  --color-border: #e3e6ec;
+
+  --color-text: #111418;
+  --color-text-muted: #6b7280;
+  --color-text-soft: #374151;
+
+  --color-primary: #e50914;
+  --color-primary-hover: #c40810;
+  --color-accent: #d39e00;
+
+  --color-header-bg: rgba(255, 255, 255, 0.85);
+  --color-hero-gradient: linear-gradient(180deg, rgba(229, 9, 20, 0.08), transparent 60%);
+  --color-backdrop-overlay: linear-gradient(180deg, rgba(246, 247, 250, 0.4), rgba(246, 247, 250, 1));
+}
+
+:root {
   --color-success: #22c55e;
   --color-error: #ef4444;
   --color-warning: #f59e0b;
