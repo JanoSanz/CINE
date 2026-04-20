@@ -89,20 +89,6 @@ cinecerca/
 - **Peliculas:** se consumen desde la API de TMDB.
 - **Cines y funciones:** estan mockeados en `public/data/cines.json` y `public/data/funciones.json` con un formato pensado para que manana se puedan reemplazar por un endpoint real sin cambiar la UI.
 
-## Deploy
-
-### Vercel
-
-1. Conectar el repo en [vercel.com](https://vercel.com).
-2. En Settings > Environment Variables agregar `PUBLIC_TMDB_API_KEY`.
-3. Deploy automatico en cada push a `main`.
-
-### Netlify
-
-1. Conectar el repo en [netlify.com](https://netlify.com).
-2. Build command: `npm run build` | Publish directory: `dist`.
-3. Agregar `PUBLIC_TMDB_API_KEY` en Environment variables.
-
 ## Roadmap
 
 - [x] MVP: busqueda, detalle, cines, horarios
@@ -115,7 +101,3 @@ cinecerca/
 ## Licencia
 
 MIT.
-
-## Autor
-
-Tu nombre aca.
