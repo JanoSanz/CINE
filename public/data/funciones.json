@@ -3,212 +3,3820 @@
     {
       "id": "fn-001",
       "cineId": "cin-001",
-      "peliculaId": 872585,
-      "fecha": "2026-04-20",
-      "horarios": ["14:30", "17:15", "20:00", "22:45"],
-      "formato": "2D",
+      "peliculaId": 550,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "13:00",
+        "14:30",
+        "15:45",
+        "17:00",
+        "22:45"
+      ],
+      "formato": "3D",
       "idioma": "Subtitulada",
-      "precio": 3500
+      "precio": 4500
     },
     {
       "id": "fn-002",
       "cineId": "cin-001",
-      "peliculaId": 872585,
-      "fecha": "2026-04-20",
-      "horarios": ["15:00", "18:00", "21:30"],
-      "formato": "IMAX",
+      "peliculaId": 550,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "19:30",
+        "20:45",
+        "23:30"
+      ],
+      "formato": "3D",
       "idioma": "Subtitulada",
-      "precio": 5500
+      "precio": 4500
     },
     {
       "id": "fn-003",
       "cineId": "cin-001",
-      "peliculaId": 346698,
-      "fecha": "2026-04-20",
-      "horarios": ["13:00", "15:30", "18:15", "21:00"],
-      "formato": "2D",
-      "idioma": "Doblada",
-      "precio": 3500
-    },
-    {
-      "id": "fn-004",
-      "cineId": "cin-002",
-      "peliculaId": 872585,
-      "fecha": "2026-04-20",
-      "horarios": ["14:00", "17:30", "21:00"],
-      "formato": "2D",
-      "idioma": "Subtitulada",
-      "precio": 3800
-    },
-    {
-      "id": "fn-005",
-      "cineId": "cin-002",
-      "peliculaId": 787699,
-      "fecha": "2026-04-20",
-      "horarios": ["13:45", "16:30", "19:15", "22:00"],
-      "formato": "2D",
-      "idioma": "Doblada",
-      "precio": 3800
-    },
-    {
-      "id": "fn-006",
-      "cineId": "cin-003",
-      "peliculaId": 346698,
-      "fecha": "2026-04-20",
-      "horarios": ["14:15", "17:00", "19:45", "22:30"],
+      "peliculaId": 299536,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "15:45",
+        "19:30",
+        "22:00"
+      ],
       "formato": "2D",
       "idioma": "Subtitulada",
       "precio": 3600
     },
     {
-      "id": "fn-007",
-      "cineId": "cin-003",
+      "id": "fn-004",
+      "cineId": "cin-001",
+      "peliculaId": 299536,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "14:30",
+        "17:00",
+        "20:45",
+        "22:00"
+      ],
+      "formato": "2D",
+      "idioma": "Doblada",
+      "precio": 3700
+    },
+    {
+      "id": "fn-005",
+      "cineId": "cin-001",
       "peliculaId": 787699,
-      "fecha": "2026-04-20",
-      "horarios": ["13:30", "16:15", "19:00", "21:45"],
+      "fecha": "2026-04-21",
+      "horarios": [
+        "14:30",
+        "15:45",
+        "22:00"
+      ],
+      "formato": "2D",
+      "idioma": "Subtitulada",
+      "precio": 3800
+    },
+    {
+      "id": "fn-006",
+      "cineId": "cin-001",
+      "peliculaId": 787699,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "13:00",
+        "14:30",
+        "17:00",
+        "18:15"
+      ],
+      "formato": "2D",
+      "idioma": "Subtitulada",
+      "precio": 3700
+    },
+    {
+      "id": "fn-007",
+      "cineId": "cin-002",
+      "peliculaId": 438631,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "13:00",
+        "14:30",
+        "19:30"
+      ],
+      "formato": "2D",
+      "idioma": "Doblada",
+      "precio": 3600
+    },
+    {
+      "id": "fn-008",
+      "cineId": "cin-002",
+      "peliculaId": 346698,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "13:00",
+        "22:45",
+        "23:30"
+      ],
+      "formato": "3D",
+      "idioma": "Doblada",
+      "precio": 4700
+    },
+    {
+      "id": "fn-009",
+      "cineId": "cin-002",
+      "peliculaId": 157336,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "13:00",
+        "14:30",
+        "17:00",
+        "20:45",
+        "22:45"
+      ],
+      "formato": "IMAX",
+      "idioma": "Subtitulada",
+      "precio": 5700
+    },
+    {
+      "id": "fn-010",
+      "cineId": "cin-002",
+      "peliculaId": 157336,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "13:00",
+        "17:00",
+        "18:15",
+        "19:30",
+        "22:00"
+      ],
+      "formato": "2D",
+      "idioma": "Doblada",
+      "precio": 3500
+    },
+    {
+      "id": "fn-011",
+      "cineId": "cin-002",
+      "peliculaId": 27205,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "15:45",
+        "19:30",
+        "23:30"
+      ],
+      "formato": "2D",
+      "idioma": "Subtitulada",
+      "precio": 3700
+    },
+    {
+      "id": "fn-012",
+      "cineId": "cin-003",
+      "peliculaId": 680,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "13:00",
+        "14:30",
+        "15:45",
+        "20:45",
+        "23:30"
+      ],
+      "formato": "2D",
+      "idioma": "Subtitulada",
+      "precio": 3600
+    },
+    {
+      "id": "fn-013",
+      "cineId": "cin-003",
+      "peliculaId": 872585,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "15:45",
+        "17:00",
+        "18:15",
+        "22:00"
+      ],
+      "formato": "IMAX",
+      "idioma": "Doblada",
+      "precio": 5800
+    },
+    {
+      "id": "fn-014",
+      "cineId": "cin-003",
+      "peliculaId": 872585,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "15:45",
+        "17:00",
+        "18:15",
+        "19:30",
+        "20:45"
+      ],
       "formato": "3D",
       "idioma": "Doblada",
       "precio": 4500
     },
     {
-      "id": "fn-008",
-      "cineId": "cin-004",
-      "peliculaId": 872585,
-      "fecha": "2026-04-20",
-      "horarios": ["15:30", "18:45", "22:00"],
-      "formato": "2D",
-      "idioma": "Subtitulada",
-      "precio": 3500
-    },
-    {
-      "id": "fn-009",
-      "cineId": "cin-004",
-      "peliculaId": 27205,
-      "fecha": "2026-04-20",
-      "horarios": ["14:00", "17:30", "21:15"],
-      "formato": "2D",
-      "idioma": "Subtitulada",
-      "precio": 3500
-    },
-    {
-      "id": "fn-010",
-      "cineId": "cin-005",
-      "peliculaId": 872585,
-      "fecha": "2026-04-20",
-      "horarios": ["13:00", "16:00", "19:00", "22:00"],
+      "id": "fn-015",
+      "cineId": "cin-003",
+      "peliculaId": 787699,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "15:45",
+        "17:00",
+        "18:15",
+        "22:45",
+        "23:30"
+      ],
       "formato": "IMAX",
-      "idioma": "Subtitulada",
+      "idioma": "Doblada",
       "precio": 5800
     },
     {
-      "id": "fn-011",
-      "cineId": "cin-005",
-      "peliculaId": 346698,
-      "fecha": "2026-04-20",
-      "horarios": ["14:30", "17:15", "20:00"],
+      "id": "fn-016",
+      "cineId": "cin-004",
+      "peliculaId": 872585,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "14:30",
+        "18:15",
+        "20:45",
+        "22:00"
+      ],
       "formato": "2D",
       "idioma": "Doblada",
       "precio": 3800
     },
     {
-      "id": "fn-012",
+      "id": "fn-017",
+      "cineId": "cin-004",
+      "peliculaId": 155,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "14:30",
+        "17:00",
+        "20:45",
+        "23:30"
+      ],
+      "formato": "2D",
+      "idioma": "Doblada",
+      "precio": 3500
+    },
+    {
+      "id": "fn-018",
+      "cineId": "cin-004",
+      "peliculaId": 155,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "15:45",
+        "18:15",
+        "20:45",
+        "23:30"
+      ],
+      "formato": "2D",
+      "idioma": "Doblada",
+      "precio": 3700
+    },
+    {
+      "id": "fn-019",
+      "cineId": "cin-004",
+      "peliculaId": 299536,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "20:45",
+        "22:00",
+        "23:30"
+      ],
+      "formato": "2D",
+      "idioma": "Subtitulada",
+      "precio": 3800
+    },
+    {
+      "id": "fn-020",
+      "cineId": "cin-004",
+      "peliculaId": 299536,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "14:30",
+        "22:45",
+        "23:30"
+      ],
+      "formato": "2D",
+      "idioma": "Doblada",
+      "precio": 3500
+    },
+    {
+      "id": "fn-021",
       "cineId": "cin-005",
-      "peliculaId": 787699,
-      "fecha": "2026-04-20",
-      "horarios": ["13:45", "16:30", "19:15", "22:00"],
+      "peliculaId": 299536,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "15:45",
+        "20:45",
+        "22:45"
+      ],
+      "formato": "2D",
+      "idioma": "Subtitulada",
+      "precio": 3900
+    },
+    {
+      "id": "fn-022",
+      "cineId": "cin-005",
+      "peliculaId": 299536,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "15:45",
+        "18:15",
+        "23:30"
+      ],
+      "formato": "2D",
+      "idioma": "Doblada",
+      "precio": 3500
+    },
+    {
+      "id": "fn-023",
+      "cineId": "cin-005",
+      "peliculaId": 157336,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "17:00",
+        "19:30",
+        "20:45",
+        "22:45",
+        "23:30"
+      ],
       "formato": "3D",
       "idioma": "Doblada",
       "precio": 4800
     },
     {
-      "id": "fn-013",
-      "cineId": "cin-006",
-      "peliculaId": 346698,
-      "fecha": "2026-04-20",
-      "horarios": ["15:00", "18:00", "21:00"],
-      "formato": "2D",
-      "idioma": "Doblada",
-      "precio": 3200
+      "id": "fn-024",
+      "cineId": "cin-005",
+      "peliculaId": 157336,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "14:30",
+        "18:15",
+        "19:30"
+      ],
+      "formato": "3D",
+      "idioma": "Subtitulada",
+      "precio": 4600
     },
     {
-      "id": "fn-014",
+      "id": "fn-025",
+      "cineId": "cin-005",
+      "peliculaId": 680,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "14:30",
+        "17:00",
+        "18:15",
+        "22:45"
+      ],
+      "formato": "3D",
+      "idioma": "Subtitulada",
+      "precio": 4500
+    },
+    {
+      "id": "fn-026",
+      "cineId": "cin-005",
+      "peliculaId": 27205,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "13:00",
+        "14:30",
+        "18:15",
+        "19:30"
+      ],
+      "formato": "2D",
+      "idioma": "Subtitulada",
+      "precio": 3900
+    },
+    {
+      "id": "fn-027",
+      "cineId": "cin-005",
+      "peliculaId": 438631,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "15:45",
+        "17:00",
+        "22:00",
+        "22:45",
+        "23:30"
+      ],
+      "formato": "3D",
+      "idioma": "Doblada",
+      "precio": 4900
+    },
+    {
+      "id": "fn-028",
+      "cineId": "cin-006",
+      "peliculaId": 299536,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "15:45",
+        "18:15",
+        "22:00",
+        "22:45",
+        "23:30"
+      ],
+      "formato": "2D",
+      "idioma": "Subtitulada",
+      "precio": 3800
+    },
+    {
+      "id": "fn-029",
       "cineId": "cin-006",
       "peliculaId": 27205,
-      "fecha": "2026-04-20",
-      "horarios": ["14:00", "17:30", "21:00"],
+      "fecha": "2026-04-21",
+      "horarios": [
+        "19:30",
+        "20:45",
+        "22:00",
+        "22:45",
+        "23:30"
+      ],
       "formato": "2D",
       "idioma": "Subtitulada",
-      "precio": 3200
+      "precio": 3700
     },
     {
-      "id": "fn-015",
-      "cineId": "cin-007",
-      "peliculaId": 872585,
-      "fecha": "2026-04-20",
-      "horarios": ["14:30", "17:45", "21:00"],
-      "formato": "2D",
-      "idioma": "Subtitulada",
-      "precio": 3400
-    },
-    {
-      "id": "fn-016",
-      "cineId": "cin-007",
-      "peliculaId": 787699,
-      "fecha": "2026-04-20",
-      "horarios": ["13:30", "16:00", "18:45", "21:30"],
+      "id": "fn-030",
+      "cineId": "cin-006",
+      "peliculaId": 27205,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "13:00",
+        "15:45",
+        "18:15",
+        "19:30",
+        "23:30"
+      ],
       "formato": "2D",
       "idioma": "Doblada",
-      "precio": 3400
+      "precio": 3700
     },
     {
-      "id": "fn-017",
+      "id": "fn-031",
+      "cineId": "cin-006",
+      "peliculaId": 155,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "13:00",
+        "17:00",
+        "18:15",
+        "22:45",
+        "23:30"
+      ],
+      "formato": "2D",
+      "idioma": "Subtitulada",
+      "precio": 3500
+    },
+    {
+      "id": "fn-032",
+      "cineId": "cin-006",
+      "peliculaId": 155,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "13:00",
+        "15:45",
+        "17:00",
+        "19:30",
+        "23:30"
+      ],
+      "formato": "2D",
+      "idioma": "Doblada",
+      "precio": 3700
+    },
+    {
+      "id": "fn-033",
+      "cineId": "cin-007",
+      "peliculaId": 157336,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "13:00",
+        "17:00",
+        "20:45"
+      ],
+      "formato": "2D",
+      "idioma": "Doblada",
+      "precio": 3800
+    },
+    {
+      "id": "fn-034",
+      "cineId": "cin-007",
+      "peliculaId": 157336,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "14:30",
+        "17:00",
+        "20:45",
+        "23:30"
+      ],
+      "formato": "2D",
+      "idioma": "Subtitulada",
+      "precio": 3800
+    },
+    {
+      "id": "fn-035",
+      "cineId": "cin-007",
+      "peliculaId": 550,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "13:00",
+        "15:45",
+        "17:00",
+        "19:30",
+        "22:45"
+      ],
+      "formato": "3D",
+      "idioma": "Subtitulada",
+      "precio": 4500
+    },
+    {
+      "id": "fn-036",
+      "cineId": "cin-007",
+      "peliculaId": 680,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "14:30",
+        "17:00",
+        "18:15",
+        "20:45"
+      ],
+      "formato": "2D",
+      "idioma": "Subtitulada",
+      "precio": 3800
+    },
+    {
+      "id": "fn-037",
+      "cineId": "cin-007",
+      "peliculaId": 680,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "15:45",
+        "17:00",
+        "22:00",
+        "23:30"
+      ],
+      "formato": "2D",
+      "idioma": "Doblada",
+      "precio": 3600
+    },
+    {
+      "id": "fn-038",
       "cineId": "cin-008",
-      "peliculaId": 346698,
-      "fecha": "2026-04-20",
-      "horarios": ["15:15", "18:00", "20:45"],
-      "formato": "2D",
-      "idioma": "Subtitulada",
-      "precio": 3300
-    },
-    {
-      "id": "fn-018",
-      "cineId": "cin-009",
-      "peliculaId": 872585,
-      "fecha": "2026-04-20",
-      "horarios": ["14:00", "17:00", "20:00"],
-      "formato": "2D",
-      "idioma": "Subtitulada",
-      "precio": 3200
-    },
-    {
-      "id": "fn-019",
-      "cineId": "cin-009",
-      "peliculaId": 787699,
-      "fecha": "2026-04-20",
-      "horarios": ["13:00", "16:00", "19:00", "22:00"],
+      "peliculaId": 680,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "18:15",
+        "20:45",
+        "22:00"
+      ],
       "formato": "2D",
       "idioma": "Doblada",
-      "precio": 3200
+      "precio": 3800
     },
     {
-      "id": "fn-020",
+      "id": "fn-039",
+      "cineId": "cin-008",
+      "peliculaId": 157336,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "14:30",
+        "19:30",
+        "22:45",
+        "23:30"
+      ],
+      "formato": "2D",
+      "idioma": "Subtitulada",
+      "precio": 3700
+    },
+    {
+      "id": "fn-040",
+      "cineId": "cin-008",
+      "peliculaId": 550,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "13:00",
+        "15:45",
+        "19:30",
+        "20:45",
+        "22:45"
+      ],
+      "formato": "2D",
+      "idioma": "Subtitulada",
+      "precio": 3700
+    },
+    {
+      "id": "fn-041",
+      "cineId": "cin-008",
+      "peliculaId": 550,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "15:45",
+        "20:45",
+        "22:45"
+      ],
+      "formato": "2D",
+      "idioma": "Doblada",
+      "precio": 3700
+    },
+    {
+      "id": "fn-042",
+      "cineId": "cin-008",
+      "peliculaId": 872585,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "14:30",
+        "17:00",
+        "19:30",
+        "22:45"
+      ],
+      "formato": "2D",
+      "idioma": "Subtitulada",
+      "precio": 3600
+    },
+    {
+      "id": "fn-043",
+      "cineId": "cin-009",
+      "peliculaId": 550,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "15:45",
+        "17:00",
+        "20:45",
+        "22:45"
+      ],
+      "formato": "3D",
+      "idioma": "Subtitulada",
+      "precio": 4700
+    },
+    {
+      "id": "fn-044",
+      "cineId": "cin-009",
+      "peliculaId": 438631,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "17:00",
+        "19:30",
+        "20:45",
+        "22:00",
+        "23:30"
+      ],
+      "formato": "2D",
+      "idioma": "Subtitulada",
+      "precio": 3500
+    },
+    {
+      "id": "fn-045",
+      "cineId": "cin-009",
+      "peliculaId": 299536,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "13:00",
+        "19:30",
+        "20:45",
+        "22:00",
+        "22:45"
+      ],
+      "formato": "2D",
+      "idioma": "Subtitulada",
+      "precio": 3900
+    },
+    {
+      "id": "fn-046",
+      "cineId": "cin-009",
+      "peliculaId": 27205,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "17:00",
+        "19:30",
+        "23:30"
+      ],
+      "formato": "2D",
+      "idioma": "Doblada",
+      "precio": 3800
+    },
+    {
+      "id": "fn-047",
+      "cineId": "cin-009",
+      "peliculaId": 27205,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "17:00",
+        "19:30",
+        "22:45",
+        "23:30"
+      ],
+      "formato": "2D",
+      "idioma": "Subtitulada",
+      "precio": 3900
+    },
+    {
+      "id": "fn-048",
+      "cineId": "cin-010",
+      "peliculaId": 680,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "13:00",
+        "19:30",
+        "22:45",
+        "23:30"
+      ],
+      "formato": "2D",
+      "idioma": "Doblada",
+      "precio": 3800
+    },
+    {
+      "id": "fn-049",
+      "cineId": "cin-010",
+      "peliculaId": 680,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "17:00",
+        "19:30",
+        "22:00"
+      ],
+      "formato": "2D",
+      "idioma": "Subtitulada",
+      "precio": 3900
+    },
+    {
+      "id": "fn-050",
       "cineId": "cin-010",
       "peliculaId": 872585,
-      "fecha": "2026-04-20",
-      "horarios": ["14:30", "18:00", "21:30"],
-      "formato": "2D",
+      "fecha": "2026-04-21",
+      "horarios": [
+        "14:30",
+        "19:30",
+        "20:45",
+        "22:45"
+      ],
+      "formato": "3D",
       "idioma": "Subtitulada",
-      "precio": 3300
+      "precio": 4700
     },
     {
-      "id": "fn-021",
+      "id": "fn-051",
       "cineId": "cin-010",
-      "peliculaId": 27205,
-      "fecha": "2026-04-20",
-      "horarios": ["15:00", "18:15", "21:30"],
+      "peliculaId": 787699,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "13:00",
+        "18:15",
+        "22:45"
+      ],
+      "formato": "2D",
+      "idioma": "Doblada",
+      "precio": 3700
+    },
+    {
+      "id": "fn-052",
+      "cineId": "cin-011",
+      "peliculaId": 438631,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "13:00",
+        "14:30",
+        "15:45",
+        "23:30"
+      ],
+      "formato": "IMAX",
+      "idioma": "Subtitulada",
+      "precio": 5700
+    },
+    {
+      "id": "fn-053",
+      "cineId": "cin-011",
+      "peliculaId": 680,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "14:30",
+        "22:45",
+        "23:30"
+      ],
+      "formato": "2D",
+      "idioma": "Doblada",
+      "precio": 3700
+    },
+    {
+      "id": "fn-054",
+      "cineId": "cin-011",
+      "peliculaId": 787699,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "15:45",
+        "17:00",
+        "19:30",
+        "20:45",
+        "22:45"
+      ],
+      "formato": "3D",
+      "idioma": "Subtitulada",
+      "precio": 4900
+    },
+    {
+      "id": "fn-055",
+      "cineId": "cin-011",
+      "peliculaId": 155,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "18:15",
+        "19:30",
+        "22:00",
+        "22:45"
+      ],
+      "formato": "2D",
+      "idioma": "Doblada",
+      "precio": 3900
+    },
+    {
+      "id": "fn-056",
+      "cineId": "cin-012",
+      "peliculaId": 155,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "13:00",
+        "15:45",
+        "17:00",
+        "18:15",
+        "20:45"
+      ],
+      "formato": "2D",
+      "idioma": "Doblada",
+      "precio": 3500
+    },
+    {
+      "id": "fn-057",
+      "cineId": "cin-012",
+      "peliculaId": 155,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "14:30",
+        "18:15",
+        "23:30"
+      ],
+      "formato": "2D",
+      "idioma": "Doblada",
+      "precio": 3800
+    },
+    {
+      "id": "fn-058",
+      "cineId": "cin-012",
+      "peliculaId": 872585,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "15:45",
+        "20:45",
+        "22:00",
+        "22:45"
+      ],
       "formato": "2D",
       "idioma": "Subtitulada",
-      "precio": 3300
+      "precio": 3800
+    },
+    {
+      "id": "fn-059",
+      "cineId": "cin-012",
+      "peliculaId": 157336,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "19:30",
+        "22:45",
+        "23:30"
+      ],
+      "formato": "3D",
+      "idioma": "Subtitulada",
+      "precio": 4600
+    },
+    {
+      "id": "fn-060",
+      "cineId": "cin-012",
+      "peliculaId": 157336,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "14:30",
+        "18:15",
+        "19:30",
+        "22:45",
+        "23:30"
+      ],
+      "formato": "2D",
+      "idioma": "Subtitulada",
+      "precio": 3700
+    },
+    {
+      "id": "fn-061",
+      "cineId": "cin-012",
+      "peliculaId": 27205,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "13:00",
+        "14:30",
+        "15:45",
+        "20:45"
+      ],
+      "formato": "IMAX",
+      "idioma": "Subtitulada",
+      "precio": 5800
+    },
+    {
+      "id": "fn-062",
+      "cineId": "cin-012",
+      "peliculaId": 27205,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "14:30",
+        "19:30",
+        "22:45"
+      ],
+      "formato": "3D",
+      "idioma": "Doblada",
+      "precio": 4900
+    },
+    {
+      "id": "fn-063",
+      "cineId": "cin-012",
+      "peliculaId": 346698,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "13:00",
+        "14:30",
+        "17:00",
+        "19:30",
+        "23:30"
+      ],
+      "formato": "2D",
+      "idioma": "Subtitulada",
+      "precio": 3600
+    },
+    {
+      "id": "fn-064",
+      "cineId": "cin-012",
+      "peliculaId": 346698,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "14:30",
+        "15:45",
+        "18:15",
+        "23:30"
+      ],
+      "formato": "2D",
+      "idioma": "Doblada",
+      "precio": 3700
+    },
+    {
+      "id": "fn-065",
+      "cineId": "cin-013",
+      "peliculaId": 550,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "17:00",
+        "19:30",
+        "20:45",
+        "22:45",
+        "23:30"
+      ],
+      "formato": "3D",
+      "idioma": "Doblada",
+      "precio": 4800
+    },
+    {
+      "id": "fn-066",
+      "cineId": "cin-013",
+      "peliculaId": 787699,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "13:00",
+        "15:45",
+        "17:00",
+        "20:45"
+      ],
+      "formato": "2D",
+      "idioma": "Subtitulada",
+      "precio": 3800
+    },
+    {
+      "id": "fn-067",
+      "cineId": "cin-013",
+      "peliculaId": 787699,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "15:45",
+        "19:30",
+        "22:00",
+        "22:45"
+      ],
+      "formato": "2D",
+      "idioma": "Doblada",
+      "precio": 3700
+    },
+    {
+      "id": "fn-068",
+      "cineId": "cin-013",
+      "peliculaId": 680,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "18:15",
+        "19:30",
+        "22:00",
+        "23:30"
+      ],
+      "formato": "2D",
+      "idioma": "Subtitulada",
+      "precio": 3600
+    },
+    {
+      "id": "fn-069",
+      "cineId": "cin-013",
+      "peliculaId": 438631,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "13:00",
+        "19:30",
+        "22:00",
+        "23:30"
+      ],
+      "formato": "2D",
+      "idioma": "Subtitulada",
+      "precio": 3600
+    },
+    {
+      "id": "fn-070",
+      "cineId": "cin-013",
+      "peliculaId": 438631,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "13:00",
+        "14:30",
+        "15:45",
+        "19:30"
+      ],
+      "formato": "3D",
+      "idioma": "Doblada",
+      "precio": 4600
+    },
+    {
+      "id": "fn-071",
+      "cineId": "cin-014",
+      "peliculaId": 346698,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "17:00",
+        "22:00",
+        "22:45",
+        "23:30"
+      ],
+      "formato": "3D",
+      "idioma": "Doblada",
+      "precio": 4500
+    },
+    {
+      "id": "fn-072",
+      "cineId": "cin-014",
+      "peliculaId": 346698,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "14:30",
+        "18:15",
+        "20:45",
+        "22:00"
+      ],
+      "formato": "2D",
+      "idioma": "Doblada",
+      "precio": 3800
+    },
+    {
+      "id": "fn-073",
+      "cineId": "cin-014",
+      "peliculaId": 550,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "15:45",
+        "17:00",
+        "19:30"
+      ],
+      "formato": "3D",
+      "idioma": "Subtitulada",
+      "precio": 4600
+    },
+    {
+      "id": "fn-074",
+      "cineId": "cin-014",
+      "peliculaId": 787699,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "15:45",
+        "17:00",
+        "22:00",
+        "22:45",
+        "23:30"
+      ],
+      "formato": "IMAX",
+      "idioma": "Doblada",
+      "precio": 5500
+    },
+    {
+      "id": "fn-075",
+      "cineId": "cin-014",
+      "peliculaId": 872585,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "15:45",
+        "18:15",
+        "23:30"
+      ],
+      "formato": "2D",
+      "idioma": "Subtitulada",
+      "precio": 3800
+    },
+    {
+      "id": "fn-076",
+      "cineId": "cin-014",
+      "peliculaId": 872585,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "13:00",
+        "15:45",
+        "18:15",
+        "19:30",
+        "22:00"
+      ],
+      "formato": "2D",
+      "idioma": "Doblada",
+      "precio": 3900
+    },
+    {
+      "id": "fn-077",
+      "cineId": "cin-014",
+      "peliculaId": 438631,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "14:30",
+        "18:15",
+        "20:45"
+      ],
+      "formato": "2D",
+      "idioma": "Doblada",
+      "precio": 3900
+    },
+    {
+      "id": "fn-078",
+      "cineId": "cin-015",
+      "peliculaId": 550,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "14:30",
+        "19:30",
+        "22:00",
+        "22:45",
+        "23:30"
+      ],
+      "formato": "IMAX",
+      "idioma": "Subtitulada",
+      "precio": 5800
+    },
+    {
+      "id": "fn-079",
+      "cineId": "cin-015",
+      "peliculaId": 346698,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "14:30",
+        "15:45",
+        "17:00",
+        "22:00",
+        "22:45"
+      ],
+      "formato": "IMAX",
+      "idioma": "Subtitulada",
+      "precio": 5800
+    },
+    {
+      "id": "fn-080",
+      "cineId": "cin-015",
+      "peliculaId": 346698,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "15:45",
+        "17:00",
+        "19:30"
+      ],
+      "formato": "3D",
+      "idioma": "Doblada",
+      "precio": 4900
+    },
+    {
+      "id": "fn-081",
+      "cineId": "cin-015",
+      "peliculaId": 299536,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "18:15",
+        "19:30",
+        "20:45",
+        "22:45",
+        "23:30"
+      ],
+      "formato": "2D",
+      "idioma": "Doblada",
+      "precio": 3700
+    },
+    {
+      "id": "fn-082",
+      "cineId": "cin-015",
+      "peliculaId": 299536,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "20:45",
+        "22:45",
+        "23:30"
+      ],
+      "formato": "IMAX",
+      "idioma": "Subtitulada",
+      "precio": 5800
+    },
+    {
+      "id": "fn-083",
+      "cineId": "cin-015",
+      "peliculaId": 155,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "15:45",
+        "17:00",
+        "18:15",
+        "19:30",
+        "22:45"
+      ],
+      "formato": "3D",
+      "idioma": "Doblada",
+      "precio": 4800
+    },
+    {
+      "id": "fn-084",
+      "cineId": "cin-015",
+      "peliculaId": 438631,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "15:45",
+        "19:30",
+        "20:45",
+        "22:45"
+      ],
+      "formato": "2D",
+      "idioma": "Subtitulada",
+      "precio": 3600
+    },
+    {
+      "id": "fn-085",
+      "cineId": "cin-016",
+      "peliculaId": 346698,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "13:00",
+        "17:00",
+        "19:30",
+        "22:00",
+        "22:45"
+      ],
+      "formato": "3D",
+      "idioma": "Subtitulada",
+      "precio": 4600
+    },
+    {
+      "id": "fn-086",
+      "cineId": "cin-016",
+      "peliculaId": 346698,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "13:00",
+        "17:00",
+        "18:15",
+        "20:45"
+      ],
+      "formato": "2D",
+      "idioma": "Doblada",
+      "precio": 3700
+    },
+    {
+      "id": "fn-087",
+      "cineId": "cin-016",
+      "peliculaId": 438631,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "15:45",
+        "18:15",
+        "20:45",
+        "22:45",
+        "23:30"
+      ],
+      "formato": "IMAX",
+      "idioma": "Subtitulada",
+      "precio": 5700
+    },
+    {
+      "id": "fn-088",
+      "cineId": "cin-016",
+      "peliculaId": 787699,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "13:00",
+        "19:30",
+        "22:00",
+        "22:45"
+      ],
+      "formato": "2D",
+      "idioma": "Doblada",
+      "precio": 3800
+    },
+    {
+      "id": "fn-089",
+      "cineId": "cin-016",
+      "peliculaId": 787699,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "13:00",
+        "17:00",
+        "18:15",
+        "22:00",
+        "22:45"
+      ],
+      "formato": "3D",
+      "idioma": "Doblada",
+      "precio": 4600
+    },
+    {
+      "id": "fn-090",
+      "cineId": "cin-017",
+      "peliculaId": 550,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "13:00",
+        "17:00",
+        "19:30",
+        "20:45"
+      ],
+      "formato": "3D",
+      "idioma": "Doblada",
+      "precio": 4900
+    },
+    {
+      "id": "fn-091",
+      "cineId": "cin-017",
+      "peliculaId": 27205,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "14:30",
+        "18:15",
+        "19:30",
+        "20:45",
+        "23:30"
+      ],
+      "formato": "2D",
+      "idioma": "Subtitulada",
+      "precio": 3800
+    },
+    {
+      "id": "fn-092",
+      "cineId": "cin-017",
+      "peliculaId": 346698,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "14:30",
+        "15:45",
+        "19:30"
+      ],
+      "formato": "2D",
+      "idioma": "Subtitulada",
+      "precio": 3800
+    },
+    {
+      "id": "fn-093",
+      "cineId": "cin-017",
+      "peliculaId": 346698,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "15:45",
+        "19:30",
+        "20:45",
+        "22:00",
+        "22:45"
+      ],
+      "formato": "IMAX",
+      "idioma": "Subtitulada",
+      "precio": 5900
+    },
+    {
+      "id": "fn-094",
+      "cineId": "cin-018",
+      "peliculaId": 787699,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "17:00",
+        "22:45",
+        "23:30"
+      ],
+      "formato": "IMAX",
+      "idioma": "Subtitulada",
+      "precio": 5500
+    },
+    {
+      "id": "fn-095",
+      "cineId": "cin-018",
+      "peliculaId": 787699,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "13:00",
+        "14:30",
+        "20:45",
+        "22:00",
+        "22:45"
+      ],
+      "formato": "2D",
+      "idioma": "Subtitulada",
+      "precio": 3800
+    },
+    {
+      "id": "fn-096",
+      "cineId": "cin-018",
+      "peliculaId": 438631,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "13:00",
+        "17:00",
+        "19:30"
+      ],
+      "formato": "2D",
+      "idioma": "Doblada",
+      "precio": 3800
+    },
+    {
+      "id": "fn-097",
+      "cineId": "cin-018",
+      "peliculaId": 438631,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "14:30",
+        "17:00",
+        "22:00",
+        "23:30"
+      ],
+      "formato": "2D",
+      "idioma": "Subtitulada",
+      "precio": 3800
+    },
+    {
+      "id": "fn-098",
+      "cineId": "cin-018",
+      "peliculaId": 299536,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "14:30",
+        "22:00",
+        "23:30"
+      ],
+      "formato": "2D",
+      "idioma": "Subtitulada",
+      "precio": 3600
+    },
+    {
+      "id": "fn-099",
+      "cineId": "cin-018",
+      "peliculaId": 550,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "14:30",
+        "17:00",
+        "23:30"
+      ],
+      "formato": "2D",
+      "idioma": "Doblada",
+      "precio": 3800
+    },
+    {
+      "id": "fn-100",
+      "cineId": "cin-018",
+      "peliculaId": 155,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "13:00",
+        "14:30",
+        "15:45",
+        "22:00"
+      ],
+      "formato": "2D",
+      "idioma": "Subtitulada",
+      "precio": 3800
+    },
+    {
+      "id": "fn-101",
+      "cineId": "cin-019",
+      "peliculaId": 299536,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "13:00",
+        "17:00",
+        "22:00"
+      ],
+      "formato": "IMAX",
+      "idioma": "Doblada",
+      "precio": 5900
+    },
+    {
+      "id": "fn-102",
+      "cineId": "cin-019",
+      "peliculaId": 872585,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "14:30",
+        "18:15",
+        "19:30"
+      ],
+      "formato": "2D",
+      "idioma": "Doblada",
+      "precio": 3600
+    },
+    {
+      "id": "fn-103",
+      "cineId": "cin-019",
+      "peliculaId": 438631,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "19:30",
+        "20:45",
+        "22:00",
+        "22:45"
+      ],
+      "formato": "3D",
+      "idioma": "Doblada",
+      "precio": 4700
+    },
+    {
+      "id": "fn-104",
+      "cineId": "cin-020",
+      "peliculaId": 155,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "13:00",
+        "20:45",
+        "22:45"
+      ],
+      "formato": "2D",
+      "idioma": "Subtitulada",
+      "precio": 3700
+    },
+    {
+      "id": "fn-105",
+      "cineId": "cin-020",
+      "peliculaId": 155,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "13:00",
+        "14:30",
+        "19:30",
+        "22:45",
+        "23:30"
+      ],
+      "formato": "2D",
+      "idioma": "Doblada",
+      "precio": 3500
+    },
+    {
+      "id": "fn-106",
+      "cineId": "cin-020",
+      "peliculaId": 438631,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "17:00",
+        "18:15",
+        "19:30",
+        "20:45",
+        "23:30"
+      ],
+      "formato": "2D",
+      "idioma": "Subtitulada",
+      "precio": 3600
+    },
+    {
+      "id": "fn-107",
+      "cineId": "cin-020",
+      "peliculaId": 872585,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "15:45",
+        "17:00",
+        "19:30",
+        "23:30"
+      ],
+      "formato": "3D",
+      "idioma": "Subtitulada",
+      "precio": 4600
+    },
+    {
+      "id": "fn-108",
+      "cineId": "cin-020",
+      "peliculaId": 550,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "13:00",
+        "20:45",
+        "22:00"
+      ],
+      "formato": "IMAX",
+      "idioma": "Subtitulada",
+      "precio": 5900
+    },
+    {
+      "id": "fn-109",
+      "cineId": "cin-020",
+      "peliculaId": 550,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "14:30",
+        "15:45",
+        "17:00",
+        "18:15",
+        "20:45"
+      ],
+      "formato": "3D",
+      "idioma": "Subtitulada",
+      "precio": 4500
+    },
+    {
+      "id": "fn-110",
+      "cineId": "cin-021",
+      "peliculaId": 550,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "13:00",
+        "15:45",
+        "19:30"
+      ],
+      "formato": "2D",
+      "idioma": "Doblada",
+      "precio": 3600
+    },
+    {
+      "id": "fn-111",
+      "cineId": "cin-021",
+      "peliculaId": 550,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "13:00",
+        "15:45",
+        "23:30"
+      ],
+      "formato": "3D",
+      "idioma": "Doblada",
+      "precio": 4600
+    },
+    {
+      "id": "fn-112",
+      "cineId": "cin-021",
+      "peliculaId": 155,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "14:30",
+        "20:45",
+        "22:45",
+        "23:30"
+      ],
+      "formato": "2D",
+      "idioma": "Doblada",
+      "precio": 3700
+    },
+    {
+      "id": "fn-113",
+      "cineId": "cin-021",
+      "peliculaId": 155,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "13:00",
+        "14:30",
+        "20:45",
+        "22:00"
+      ],
+      "formato": "3D",
+      "idioma": "Subtitulada",
+      "precio": 4700
+    },
+    {
+      "id": "fn-114",
+      "cineId": "cin-021",
+      "peliculaId": 346698,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "13:00",
+        "14:30",
+        "18:15"
+      ],
+      "formato": "2D",
+      "idioma": "Doblada",
+      "precio": 3600
+    },
+    {
+      "id": "fn-115",
+      "cineId": "cin-021",
+      "peliculaId": 346698,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "17:00",
+        "18:15",
+        "19:30",
+        "20:45",
+        "23:30"
+      ],
+      "formato": "2D",
+      "idioma": "Doblada",
+      "precio": 3900
+    },
+    {
+      "id": "fn-116",
+      "cineId": "cin-021",
+      "peliculaId": 787699,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "17:00",
+        "18:15",
+        "19:30"
+      ],
+      "formato": "2D",
+      "idioma": "Doblada",
+      "precio": 3900
+    },
+    {
+      "id": "fn-117",
+      "cineId": "cin-021",
+      "peliculaId": 787699,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "14:30",
+        "15:45",
+        "17:00",
+        "20:45",
+        "22:45"
+      ],
+      "formato": "2D",
+      "idioma": "Doblada",
+      "precio": 3900
+    },
+    {
+      "id": "fn-118",
+      "cineId": "cin-021",
+      "peliculaId": 872585,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "17:00",
+        "19:30",
+        "23:30"
+      ],
+      "formato": "2D",
+      "idioma": "Doblada",
+      "precio": 3700
+    },
+    {
+      "id": "fn-119",
+      "cineId": "cin-021",
+      "peliculaId": 872585,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "18:15",
+        "22:00",
+        "23:30"
+      ],
+      "formato": "3D",
+      "idioma": "Subtitulada",
+      "precio": 4700
+    },
+    {
+      "id": "fn-120",
+      "cineId": "cin-022",
+      "peliculaId": 27205,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "17:00",
+        "19:30",
+        "22:00",
+        "22:45",
+        "23:30"
+      ],
+      "formato": "2D",
+      "idioma": "Doblada",
+      "precio": 3900
+    },
+    {
+      "id": "fn-121",
+      "cineId": "cin-022",
+      "peliculaId": 27205,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "13:00",
+        "17:00",
+        "18:15",
+        "20:45",
+        "22:00"
+      ],
+      "formato": "2D",
+      "idioma": "Subtitulada",
+      "precio": 3800
+    },
+    {
+      "id": "fn-122",
+      "cineId": "cin-022",
+      "peliculaId": 872585,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "18:15",
+        "19:30",
+        "20:45",
+        "23:30"
+      ],
+      "formato": "3D",
+      "idioma": "Subtitulada",
+      "precio": 4900
+    },
+    {
+      "id": "fn-123",
+      "cineId": "cin-022",
+      "peliculaId": 872585,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "13:00",
+        "14:30",
+        "22:00",
+        "23:30"
+      ],
+      "formato": "3D",
+      "idioma": "Subtitulada",
+      "precio": 4900
+    },
+    {
+      "id": "fn-124",
+      "cineId": "cin-022",
+      "peliculaId": 299536,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "13:00",
+        "14:30",
+        "15:45",
+        "18:15",
+        "22:00"
+      ],
+      "formato": "2D",
+      "idioma": "Doblada",
+      "precio": 3700
+    },
+    {
+      "id": "fn-125",
+      "cineId": "cin-023",
+      "peliculaId": 438631,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "15:45",
+        "17:00",
+        "23:30"
+      ],
+      "formato": "IMAX",
+      "idioma": "Doblada",
+      "precio": 5500
+    },
+    {
+      "id": "fn-126",
+      "cineId": "cin-023",
+      "peliculaId": 438631,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "15:45",
+        "19:30",
+        "23:30"
+      ],
+      "formato": "2D",
+      "idioma": "Subtitulada",
+      "precio": 3800
+    },
+    {
+      "id": "fn-127",
+      "cineId": "cin-023",
+      "peliculaId": 680,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "14:30",
+        "15:45",
+        "17:00",
+        "20:45",
+        "22:00"
+      ],
+      "formato": "3D",
+      "idioma": "Doblada",
+      "precio": 4900
+    },
+    {
+      "id": "fn-128",
+      "cineId": "cin-023",
+      "peliculaId": 680,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "17:00",
+        "22:45",
+        "23:30"
+      ],
+      "formato": "2D",
+      "idioma": "Subtitulada",
+      "precio": 3800
+    },
+    {
+      "id": "fn-129",
+      "cineId": "cin-023",
+      "peliculaId": 550,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "18:15",
+        "22:00",
+        "23:30"
+      ],
+      "formato": "2D",
+      "idioma": "Doblada",
+      "precio": 3700
+    },
+    {
+      "id": "fn-130",
+      "cineId": "cin-024",
+      "peliculaId": 157336,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "15:45",
+        "17:00",
+        "18:15",
+        "22:00",
+        "22:45"
+      ],
+      "formato": "2D",
+      "idioma": "Doblada",
+      "precio": 3800
+    },
+    {
+      "id": "fn-131",
+      "cineId": "cin-024",
+      "peliculaId": 157336,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "14:30",
+        "18:15",
+        "19:30",
+        "23:30"
+      ],
+      "formato": "3D",
+      "idioma": "Subtitulada",
+      "precio": 4700
+    },
+    {
+      "id": "fn-132",
+      "cineId": "cin-024",
+      "peliculaId": 680,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "15:45",
+        "17:00",
+        "19:30",
+        "22:00"
+      ],
+      "formato": "3D",
+      "idioma": "Subtitulada",
+      "precio": 4800
+    },
+    {
+      "id": "fn-133",
+      "cineId": "cin-024",
+      "peliculaId": 680,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "15:45",
+        "18:15",
+        "19:30",
+        "22:45",
+        "23:30"
+      ],
+      "formato": "2D",
+      "idioma": "Subtitulada",
+      "precio": 3500
+    },
+    {
+      "id": "fn-134",
+      "cineId": "cin-024",
+      "peliculaId": 299536,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "13:00",
+        "14:30",
+        "17:00",
+        "19:30",
+        "23:30"
+      ],
+      "formato": "3D",
+      "idioma": "Doblada",
+      "precio": 4900
+    },
+    {
+      "id": "fn-135",
+      "cineId": "cin-024",
+      "peliculaId": 299536,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "13:00",
+        "19:30",
+        "20:45"
+      ],
+      "formato": "2D",
+      "idioma": "Doblada",
+      "precio": 3600
+    },
+    {
+      "id": "fn-136",
+      "cineId": "cin-024",
+      "peliculaId": 872585,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "17:00",
+        "19:30",
+        "20:45",
+        "22:45",
+        "23:30"
+      ],
+      "formato": "IMAX",
+      "idioma": "Subtitulada",
+      "precio": 5800
+    },
+    {
+      "id": "fn-137",
+      "cineId": "cin-024",
+      "peliculaId": 872585,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "14:30",
+        "18:15",
+        "19:30",
+        "20:45",
+        "23:30"
+      ],
+      "formato": "2D",
+      "idioma": "Subtitulada",
+      "precio": 3600
+    },
+    {
+      "id": "fn-138",
+      "cineId": "cin-025",
+      "peliculaId": 155,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "19:30",
+        "20:45",
+        "22:00",
+        "23:30"
+      ],
+      "formato": "2D",
+      "idioma": "Doblada",
+      "precio": 3700
+    },
+    {
+      "id": "fn-139",
+      "cineId": "cin-025",
+      "peliculaId": 155,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "13:00",
+        "14:30",
+        "23:30"
+      ],
+      "formato": "2D",
+      "idioma": "Doblada",
+      "precio": 3600
+    },
+    {
+      "id": "fn-140",
+      "cineId": "cin-025",
+      "peliculaId": 680,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "13:00",
+        "17:00",
+        "18:15",
+        "20:45",
+        "23:30"
+      ],
+      "formato": "IMAX",
+      "idioma": "Subtitulada",
+      "precio": 5600
+    },
+    {
+      "id": "fn-141",
+      "cineId": "cin-025",
+      "peliculaId": 680,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "15:45",
+        "17:00",
+        "18:15",
+        "19:30"
+      ],
+      "formato": "2D",
+      "idioma": "Subtitulada",
+      "precio": 3800
+    },
+    {
+      "id": "fn-142",
+      "cineId": "cin-025",
+      "peliculaId": 157336,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "14:30",
+        "18:15",
+        "22:00"
+      ],
+      "formato": "2D",
+      "idioma": "Subtitulada",
+      "precio": 3900
+    },
+    {
+      "id": "fn-143",
+      "cineId": "cin-025",
+      "peliculaId": 438631,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "14:30",
+        "15:45",
+        "17:00",
+        "20:45",
+        "23:30"
+      ],
+      "formato": "2D",
+      "idioma": "Doblada",
+      "precio": 3800
+    },
+    {
+      "id": "fn-144",
+      "cineId": "cin-025",
+      "peliculaId": 787699,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "14:30",
+        "18:15",
+        "19:30",
+        "22:45"
+      ],
+      "formato": "2D",
+      "idioma": "Doblada",
+      "precio": 3500
+    },
+    {
+      "id": "fn-145",
+      "cineId": "cin-026",
+      "peliculaId": 27205,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "14:30",
+        "17:00",
+        "19:30",
+        "22:45"
+      ],
+      "formato": "2D",
+      "idioma": "Doblada",
+      "precio": 3600
+    },
+    {
+      "id": "fn-146",
+      "cineId": "cin-026",
+      "peliculaId": 155,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "13:00",
+        "22:00",
+        "23:30"
+      ],
+      "formato": "2D",
+      "idioma": "Doblada",
+      "precio": 3900
+    },
+    {
+      "id": "fn-147",
+      "cineId": "cin-026",
+      "peliculaId": 155,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "14:30",
+        "17:00",
+        "18:15",
+        "20:45",
+        "23:30"
+      ],
+      "formato": "IMAX",
+      "idioma": "Subtitulada",
+      "precio": 5500
+    },
+    {
+      "id": "fn-148",
+      "cineId": "cin-026",
+      "peliculaId": 872585,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "14:30",
+        "15:45",
+        "19:30",
+        "20:45"
+      ],
+      "formato": "2D",
+      "idioma": "Doblada",
+      "precio": 3700
+    },
+    {
+      "id": "fn-149",
+      "cineId": "cin-026",
+      "peliculaId": 438631,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "14:30",
+        "15:45",
+        "18:15",
+        "23:30"
+      ],
+      "formato": "2D",
+      "idioma": "Subtitulada",
+      "precio": 3800
+    },
+    {
+      "id": "fn-150",
+      "cineId": "cin-026",
+      "peliculaId": 438631,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "13:00",
+        "14:30",
+        "19:30",
+        "22:00",
+        "23:30"
+      ],
+      "formato": "2D",
+      "idioma": "Subtitulada",
+      "precio": 3600
+    },
+    {
+      "id": "fn-151",
+      "cineId": "cin-027",
+      "peliculaId": 299536,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "15:45",
+        "22:45",
+        "23:30"
+      ],
+      "formato": "2D",
+      "idioma": "Subtitulada",
+      "precio": 3600
+    },
+    {
+      "id": "fn-152",
+      "cineId": "cin-027",
+      "peliculaId": 299536,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "13:00",
+        "14:30",
+        "15:45",
+        "19:30",
+        "22:00"
+      ],
+      "formato": "2D",
+      "idioma": "Subtitulada",
+      "precio": 3800
+    },
+    {
+      "id": "fn-153",
+      "cineId": "cin-027",
+      "peliculaId": 680,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "15:45",
+        "18:15",
+        "20:45",
+        "22:00"
+      ],
+      "formato": "2D",
+      "idioma": "Doblada",
+      "precio": 3700
+    },
+    {
+      "id": "fn-154",
+      "cineId": "cin-027",
+      "peliculaId": 346698,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "13:00",
+        "14:30",
+        "17:00",
+        "19:30"
+      ],
+      "formato": "2D",
+      "idioma": "Subtitulada",
+      "precio": 3900
+    },
+    {
+      "id": "fn-155",
+      "cineId": "cin-027",
+      "peliculaId": 346698,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "13:00",
+        "18:15",
+        "19:30",
+        "23:30"
+      ],
+      "formato": "IMAX",
+      "idioma": "Doblada",
+      "precio": 5600
+    },
+    {
+      "id": "fn-156",
+      "cineId": "cin-027",
+      "peliculaId": 155,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "14:30",
+        "15:45",
+        "22:00",
+        "23:30"
+      ],
+      "formato": "3D",
+      "idioma": "Subtitulada",
+      "precio": 4600
+    },
+    {
+      "id": "fn-157",
+      "cineId": "cin-027",
+      "peliculaId": 155,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "14:30",
+        "19:30",
+        "20:45",
+        "22:00"
+      ],
+      "formato": "2D",
+      "idioma": "Subtitulada",
+      "precio": 3900
+    },
+    {
+      "id": "fn-158",
+      "cineId": "cin-027",
+      "peliculaId": 787699,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "15:45",
+        "19:30",
+        "22:00",
+        "22:45",
+        "23:30"
+      ],
+      "formato": "2D",
+      "idioma": "Subtitulada",
+      "precio": 3600
+    },
+    {
+      "id": "fn-159",
+      "cineId": "cin-028",
+      "peliculaId": 550,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "18:15",
+        "19:30",
+        "23:30"
+      ],
+      "formato": "2D",
+      "idioma": "Doblada",
+      "precio": 3900
+    },
+    {
+      "id": "fn-160",
+      "cineId": "cin-028",
+      "peliculaId": 550,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "14:30",
+        "18:15",
+        "19:30",
+        "22:00",
+        "22:45"
+      ],
+      "formato": "2D",
+      "idioma": "Subtitulada",
+      "precio": 3900
+    },
+    {
+      "id": "fn-161",
+      "cineId": "cin-028",
+      "peliculaId": 346698,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "13:00",
+        "15:45",
+        "20:45",
+        "22:00"
+      ],
+      "formato": "3D",
+      "idioma": "Subtitulada",
+      "precio": 4900
+    },
+    {
+      "id": "fn-162",
+      "cineId": "cin-028",
+      "peliculaId": 872585,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "14:30",
+        "17:00",
+        "18:15",
+        "22:00",
+        "23:30"
+      ],
+      "formato": "3D",
+      "idioma": "Doblada",
+      "precio": 4800
+    },
+    {
+      "id": "fn-163",
+      "cineId": "cin-028",
+      "peliculaId": 872585,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "13:00",
+        "15:45",
+        "20:45",
+        "22:00"
+      ],
+      "formato": "2D",
+      "idioma": "Subtitulada",
+      "precio": 3600
+    },
+    {
+      "id": "fn-164",
+      "cineId": "cin-028",
+      "peliculaId": 157336,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "14:30",
+        "17:00",
+        "22:45"
+      ],
+      "formato": "3D",
+      "idioma": "Subtitulada",
+      "precio": 4900
+    },
+    {
+      "id": "fn-165",
+      "cineId": "cin-028",
+      "peliculaId": 157336,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "15:45",
+        "17:00",
+        "19:30",
+        "20:45",
+        "23:30"
+      ],
+      "formato": "2D",
+      "idioma": "Doblada",
+      "precio": 3800
+    },
+    {
+      "id": "fn-166",
+      "cineId": "cin-029",
+      "peliculaId": 157336,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "13:00",
+        "14:30",
+        "19:30",
+        "20:45",
+        "22:00"
+      ],
+      "formato": "2D",
+      "idioma": "Subtitulada",
+      "precio": 3500
+    },
+    {
+      "id": "fn-167",
+      "cineId": "cin-029",
+      "peliculaId": 155,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "13:00",
+        "17:00",
+        "18:15",
+        "22:00"
+      ],
+      "formato": "3D",
+      "idioma": "Subtitulada",
+      "precio": 4900
+    },
+    {
+      "id": "fn-168",
+      "cineId": "cin-029",
+      "peliculaId": 27205,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "13:00",
+        "15:45",
+        "22:00",
+        "22:45",
+        "23:30"
+      ],
+      "formato": "IMAX",
+      "idioma": "Subtitulada",
+      "precio": 5600
+    },
+    {
+      "id": "fn-169",
+      "cineId": "cin-029",
+      "peliculaId": 872585,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "15:45",
+        "18:15",
+        "20:45",
+        "23:30"
+      ],
+      "formato": "2D",
+      "idioma": "Subtitulada",
+      "precio": 3600
+    },
+    {
+      "id": "fn-170",
+      "cineId": "cin-029",
+      "peliculaId": 872585,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "14:30",
+        "20:45",
+        "22:00",
+        "22:45"
+      ],
+      "formato": "2D",
+      "idioma": "Subtitulada",
+      "precio": 3900
+    },
+    {
+      "id": "fn-171",
+      "cineId": "cin-029",
+      "peliculaId": 680,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "14:30",
+        "20:45",
+        "22:00",
+        "22:45"
+      ],
+      "formato": "2D",
+      "idioma": "Subtitulada",
+      "precio": 3500
+    },
+    {
+      "id": "fn-172",
+      "cineId": "cin-030",
+      "peliculaId": 438631,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "15:45",
+        "19:30",
+        "20:45",
+        "22:45"
+      ],
+      "formato": "2D",
+      "idioma": "Subtitulada",
+      "precio": 3600
+    },
+    {
+      "id": "fn-173",
+      "cineId": "cin-030",
+      "peliculaId": 27205,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "13:00",
+        "14:30",
+        "18:15",
+        "22:45"
+      ],
+      "formato": "IMAX",
+      "idioma": "Subtitulada",
+      "precio": 5700
+    },
+    {
+      "id": "fn-174",
+      "cineId": "cin-030",
+      "peliculaId": 299536,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "14:30",
+        "18:15",
+        "19:30",
+        "20:45"
+      ],
+      "formato": "IMAX",
+      "idioma": "Subtitulada",
+      "precio": 5500
+    },
+    {
+      "id": "fn-175",
+      "cineId": "cin-030",
+      "peliculaId": 299536,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "13:00",
+        "17:00",
+        "19:30",
+        "20:45",
+        "23:30"
+      ],
+      "formato": "2D",
+      "idioma": "Doblada",
+      "precio": 3700
+    },
+    {
+      "id": "fn-176",
+      "cineId": "cin-030",
+      "peliculaId": 346698,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "13:00",
+        "15:45",
+        "20:45",
+        "22:00"
+      ],
+      "formato": "3D",
+      "idioma": "Doblada",
+      "precio": 4800
+    },
+    {
+      "id": "fn-177",
+      "cineId": "cin-030",
+      "peliculaId": 346698,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "13:00",
+        "17:00",
+        "22:45",
+        "23:30"
+      ],
+      "formato": "2D",
+      "idioma": "Doblada",
+      "precio": 3900
+    },
+    {
+      "id": "fn-178",
+      "cineId": "cin-030",
+      "peliculaId": 872585,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "20:45",
+        "22:45",
+        "23:30"
+      ],
+      "formato": "IMAX",
+      "idioma": "Subtitulada",
+      "precio": 5700
+    },
+    {
+      "id": "fn-179",
+      "cineId": "cin-030",
+      "peliculaId": 872585,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "14:30",
+        "17:00",
+        "18:15",
+        "19:30",
+        "23:30"
+      ],
+      "formato": "2D",
+      "idioma": "Subtitulada",
+      "precio": 3600
+    },
+    {
+      "id": "fn-180",
+      "cineId": "cin-031",
+      "peliculaId": 438631,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "15:45",
+        "18:15",
+        "22:00"
+      ],
+      "formato": "IMAX",
+      "idioma": "Subtitulada",
+      "precio": 5600
+    },
+    {
+      "id": "fn-181",
+      "cineId": "cin-031",
+      "peliculaId": 438631,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "17:00",
+        "18:15",
+        "23:30"
+      ],
+      "formato": "IMAX",
+      "idioma": "Doblada",
+      "precio": 5600
+    },
+    {
+      "id": "fn-182",
+      "cineId": "cin-031",
+      "peliculaId": 299536,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "13:00",
+        "15:45",
+        "17:00",
+        "18:15",
+        "22:45"
+      ],
+      "formato": "2D",
+      "idioma": "Doblada",
+      "precio": 3800
+    },
+    {
+      "id": "fn-183",
+      "cineId": "cin-031",
+      "peliculaId": 299536,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "22:00",
+        "22:45",
+        "23:30"
+      ],
+      "formato": "2D",
+      "idioma": "Doblada",
+      "precio": 3500
+    },
+    {
+      "id": "fn-184",
+      "cineId": "cin-031",
+      "peliculaId": 872585,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "13:00",
+        "17:00",
+        "19:30"
+      ],
+      "formato": "2D",
+      "idioma": "Subtitulada",
+      "precio": 3800
+    },
+    {
+      "id": "fn-185",
+      "cineId": "cin-031",
+      "peliculaId": 872585,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "15:45",
+        "18:15",
+        "19:30",
+        "22:00",
+        "23:30"
+      ],
+      "formato": "IMAX",
+      "idioma": "Subtitulada",
+      "precio": 5900
+    },
+    {
+      "id": "fn-186",
+      "cineId": "cin-031",
+      "peliculaId": 550,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "13:00",
+        "17:00",
+        "18:15",
+        "22:45",
+        "23:30"
+      ],
+      "formato": "2D",
+      "idioma": "Doblada",
+      "precio": 3700
+    },
+    {
+      "id": "fn-187",
+      "cineId": "cin-031",
+      "peliculaId": 550,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "13:00",
+        "14:30",
+        "15:45",
+        "17:00"
+      ],
+      "formato": "2D",
+      "idioma": "Subtitulada",
+      "precio": 3900
+    },
+    {
+      "id": "fn-188",
+      "cineId": "cin-031",
+      "peliculaId": 157336,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "14:30",
+        "15:45",
+        "18:15",
+        "19:30",
+        "20:45"
+      ],
+      "formato": "2D",
+      "idioma": "Doblada",
+      "precio": 3900
+    },
+    {
+      "id": "fn-189",
+      "cineId": "cin-031",
+      "peliculaId": 157336,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "13:00",
+        "17:00",
+        "18:15",
+        "22:00"
+      ],
+      "formato": "2D",
+      "idioma": "Subtitulada",
+      "precio": 3600
+    },
+    {
+      "id": "fn-190",
+      "cineId": "cin-032",
+      "peliculaId": 872585,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "13:00",
+        "15:45",
+        "22:45",
+        "23:30"
+      ],
+      "formato": "2D",
+      "idioma": "Subtitulada",
+      "precio": 3900
+    },
+    {
+      "id": "fn-191",
+      "cineId": "cin-032",
+      "peliculaId": 872585,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "14:30",
+        "20:45",
+        "22:00",
+        "23:30"
+      ],
+      "formato": "3D",
+      "idioma": "Subtitulada",
+      "precio": 4700
+    },
+    {
+      "id": "fn-192",
+      "cineId": "cin-032",
+      "peliculaId": 438631,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "13:00",
+        "18:15",
+        "19:30",
+        "20:45"
+      ],
+      "formato": "2D",
+      "idioma": "Doblada",
+      "precio": 3900
+    },
+    {
+      "id": "fn-193",
+      "cineId": "cin-032",
+      "peliculaId": 155,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "13:00",
+        "14:30",
+        "18:15",
+        "20:45",
+        "22:00"
+      ],
+      "formato": "IMAX",
+      "idioma": "Doblada",
+      "precio": 5800
+    },
+    {
+      "id": "fn-194",
+      "cineId": "cin-032",
+      "peliculaId": 155,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "13:00",
+        "14:30",
+        "19:30",
+        "20:45",
+        "22:45"
+      ],
+      "formato": "3D",
+      "idioma": "Doblada",
+      "precio": 4700
+    },
+    {
+      "id": "fn-195",
+      "cineId": "cin-033",
+      "peliculaId": 155,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "13:00",
+        "14:30",
+        "15:45",
+        "23:30"
+      ],
+      "formato": "IMAX",
+      "idioma": "Subtitulada",
+      "precio": 5900
+    },
+    {
+      "id": "fn-196",
+      "cineId": "cin-033",
+      "peliculaId": 155,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "17:00",
+        "18:15",
+        "22:00",
+        "23:30"
+      ],
+      "formato": "2D",
+      "idioma": "Subtitulada",
+      "precio": 3900
+    },
+    {
+      "id": "fn-197",
+      "cineId": "cin-033",
+      "peliculaId": 550,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "13:00",
+        "14:30",
+        "19:30",
+        "20:45",
+        "22:45"
+      ],
+      "formato": "3D",
+      "idioma": "Subtitulada",
+      "precio": 4700
+    },
+    {
+      "id": "fn-198",
+      "cineId": "cin-033",
+      "peliculaId": 550,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "14:30",
+        "15:45",
+        "17:00",
+        "22:00"
+      ],
+      "formato": "3D",
+      "idioma": "Doblada",
+      "precio": 4700
+    },
+    {
+      "id": "fn-199",
+      "cineId": "cin-033",
+      "peliculaId": 346698,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "13:00",
+        "18:15",
+        "19:30",
+        "20:45"
+      ],
+      "formato": "2D",
+      "idioma": "Doblada",
+      "precio": 3500
+    },
+    {
+      "id": "fn-200",
+      "cineId": "cin-033",
+      "peliculaId": 346698,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "17:00",
+        "22:00",
+        "22:45"
+      ],
+      "formato": "3D",
+      "idioma": "Subtitulada",
+      "precio": 4900
+    },
+    {
+      "id": "fn-201",
+      "cineId": "cin-034",
+      "peliculaId": 346698,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "13:00",
+        "15:45",
+        "17:00",
+        "18:15",
+        "23:30"
+      ],
+      "formato": "2D",
+      "idioma": "Subtitulada",
+      "precio": 3900
+    },
+    {
+      "id": "fn-202",
+      "cineId": "cin-034",
+      "peliculaId": 157336,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "17:00",
+        "19:30",
+        "22:00",
+        "22:45"
+      ],
+      "formato": "3D",
+      "idioma": "Subtitulada",
+      "precio": 4900
+    },
+    {
+      "id": "fn-203",
+      "cineId": "cin-034",
+      "peliculaId": 299536,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "13:00",
+        "15:45",
+        "17:00",
+        "18:15",
+        "22:00"
+      ],
+      "formato": "2D",
+      "idioma": "Subtitulada",
+      "precio": 3900
+    },
+    {
+      "id": "fn-204",
+      "cineId": "cin-034",
+      "peliculaId": 299536,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "14:30",
+        "18:15",
+        "19:30",
+        "22:45",
+        "23:30"
+      ],
+      "formato": "3D",
+      "idioma": "Subtitulada",
+      "precio": 4700
+    },
+    {
+      "id": "fn-205",
+      "cineId": "cin-034",
+      "peliculaId": 872585,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "18:15",
+        "19:30",
+        "22:00",
+        "22:45"
+      ],
+      "formato": "2D",
+      "idioma": "Subtitulada",
+      "precio": 3800
+    },
+    {
+      "id": "fn-206",
+      "cineId": "cin-034",
+      "peliculaId": 27205,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "13:00",
+        "19:30",
+        "20:45",
+        "22:00",
+        "23:30"
+      ],
+      "formato": "3D",
+      "idioma": "Doblada",
+      "precio": 4600
+    },
+    {
+      "id": "fn-207",
+      "cineId": "cin-035",
+      "peliculaId": 27205,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "13:00",
+        "14:30",
+        "19:30",
+        "22:45",
+        "23:30"
+      ],
+      "formato": "2D",
+      "idioma": "Doblada",
+      "precio": 3600
+    },
+    {
+      "id": "fn-208",
+      "cineId": "cin-035",
+      "peliculaId": 872585,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "13:00",
+        "14:30",
+        "15:45",
+        "20:45",
+        "22:45"
+      ],
+      "formato": "2D",
+      "idioma": "Subtitulada",
+      "precio": 3700
+    },
+    {
+      "id": "fn-209",
+      "cineId": "cin-035",
+      "peliculaId": 872585,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "13:00",
+        "14:30",
+        "18:15",
+        "19:30"
+      ],
+      "formato": "2D",
+      "idioma": "Doblada",
+      "precio": 3900
+    },
+    {
+      "id": "fn-210",
+      "cineId": "cin-035",
+      "peliculaId": 346698,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "13:00",
+        "14:30",
+        "17:00",
+        "22:45"
+      ],
+      "formato": "2D",
+      "idioma": "Subtitulada",
+      "precio": 3600
+    },
+    {
+      "id": "fn-211",
+      "cineId": "cin-035",
+      "peliculaId": 299536,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "14:30",
+        "15:45",
+        "20:45",
+        "22:45"
+      ],
+      "formato": "3D",
+      "idioma": "Subtitulada",
+      "precio": 4800
+    },
+    {
+      "id": "fn-212",
+      "cineId": "cin-035",
+      "peliculaId": 299536,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "18:15",
+        "19:30",
+        "20:45",
+        "23:30"
+      ],
+      "formato": "3D",
+      "idioma": "Subtitulada",
+      "precio": 4600
+    },
+    {
+      "id": "fn-213",
+      "cineId": "cin-035",
+      "peliculaId": 787699,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "13:00",
+        "17:00",
+        "22:45"
+      ],
+      "formato": "3D",
+      "idioma": "Subtitulada",
+      "precio": 4500
+    },
+    {
+      "id": "fn-214",
+      "cineId": "cin-035",
+      "peliculaId": 787699,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "13:00",
+        "14:30",
+        "15:45",
+        "20:45",
+        "23:30"
+      ],
+      "formato": "2D",
+      "idioma": "Subtitulada",
+      "precio": 3500
+    },
+    {
+      "id": "fn-215",
+      "cineId": "cin-036",
+      "peliculaId": 787699,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "15:45",
+        "17:00",
+        "18:15",
+        "20:45",
+        "22:45"
+      ],
+      "formato": "2D",
+      "idioma": "Doblada",
+      "precio": 3800
+    },
+    {
+      "id": "fn-216",
+      "cineId": "cin-036",
+      "peliculaId": 787699,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "14:30",
+        "15:45",
+        "22:00",
+        "23:30"
+      ],
+      "formato": "2D",
+      "idioma": "Subtitulada",
+      "precio": 3800
+    },
+    {
+      "id": "fn-217",
+      "cineId": "cin-036",
+      "peliculaId": 155,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "14:30",
+        "15:45",
+        "19:30",
+        "22:45",
+        "23:30"
+      ],
+      "formato": "2D",
+      "idioma": "Subtitulada",
+      "precio": 3600
+    },
+    {
+      "id": "fn-218",
+      "cineId": "cin-036",
+      "peliculaId": 299536,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "13:00",
+        "14:30",
+        "17:00",
+        "18:15",
+        "19:30"
+      ],
+      "formato": "2D",
+      "idioma": "Subtitulada",
+      "precio": 3800
+    },
+    {
+      "id": "fn-219",
+      "cineId": "cin-036",
+      "peliculaId": 299536,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "13:00",
+        "15:45",
+        "18:15",
+        "22:45",
+        "23:30"
+      ],
+      "formato": "2D",
+      "idioma": "Subtitulada",
+      "precio": 3900
+    },
+    {
+      "id": "fn-220",
+      "cineId": "cin-037",
+      "peliculaId": 872585,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "14:30",
+        "15:45",
+        "18:15",
+        "20:45",
+        "22:00"
+      ],
+      "formato": "3D",
+      "idioma": "Doblada",
+      "precio": 4600
+    },
+    {
+      "id": "fn-221",
+      "cineId": "cin-037",
+      "peliculaId": 27205,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "13:00",
+        "15:45",
+        "18:15"
+      ],
+      "formato": "2D",
+      "idioma": "Subtitulada",
+      "precio": 3500
+    },
+    {
+      "id": "fn-222",
+      "cineId": "cin-037",
+      "peliculaId": 27205,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "15:45",
+        "17:00",
+        "20:45"
+      ],
+      "formato": "3D",
+      "idioma": "Subtitulada",
+      "precio": 4900
+    },
+    {
+      "id": "fn-223",
+      "cineId": "cin-037",
+      "peliculaId": 787699,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "13:00",
+        "14:30",
+        "18:15"
+      ],
+      "formato": "2D",
+      "idioma": "Subtitulada",
+      "precio": 3700
+    },
+    {
+      "id": "fn-224",
+      "cineId": "cin-037",
+      "peliculaId": 299536,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "15:45",
+        "17:00",
+        "19:30",
+        "22:45"
+      ],
+      "formato": "2D",
+      "idioma": "Doblada",
+      "precio": 3500
+    },
+    {
+      "id": "fn-225",
+      "cineId": "cin-037",
+      "peliculaId": 299536,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "14:30",
+        "17:00",
+        "19:30",
+        "22:00"
+      ],
+      "formato": "2D",
+      "idioma": "Subtitulada",
+      "precio": 3700
+    },
+    {
+      "id": "fn-226",
+      "cineId": "cin-038",
+      "peliculaId": 299536,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "15:45",
+        "20:45",
+        "22:00"
+      ],
+      "formato": "2D",
+      "idioma": "Subtitulada",
+      "precio": 3800
+    },
+    {
+      "id": "fn-227",
+      "cineId": "cin-038",
+      "peliculaId": 299536,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "15:45",
+        "18:15",
+        "19:30",
+        "22:45",
+        "23:30"
+      ],
+      "formato": "2D",
+      "idioma": "Subtitulada",
+      "precio": 3700
+    },
+    {
+      "id": "fn-228",
+      "cineId": "cin-038",
+      "peliculaId": 550,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "14:30",
+        "19:30",
+        "22:00"
+      ],
+      "formato": "2D",
+      "idioma": "Subtitulada",
+      "precio": 3700
+    },
+    {
+      "id": "fn-229",
+      "cineId": "cin-038",
+      "peliculaId": 550,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "18:15",
+        "22:00",
+        "23:30"
+      ],
+      "formato": "3D",
+      "idioma": "Subtitulada",
+      "precio": 4900
+    },
+    {
+      "id": "fn-230",
+      "cineId": "cin-038",
+      "peliculaId": 787699,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "13:00",
+        "17:00",
+        "18:15",
+        "20:45",
+        "23:30"
+      ],
+      "formato": "IMAX",
+      "idioma": "Subtitulada",
+      "precio": 5500
+    },
+    {
+      "id": "fn-231",
+      "cineId": "cin-038",
+      "peliculaId": 787699,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "14:30",
+        "19:30",
+        "20:45",
+        "22:00"
+      ],
+      "formato": "2D",
+      "idioma": "Doblada",
+      "precio": 3900
+    },
+    {
+      "id": "fn-232",
+      "cineId": "cin-038",
+      "peliculaId": 346698,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "13:00",
+        "17:00",
+        "22:45"
+      ],
+      "formato": "IMAX",
+      "idioma": "Subtitulada",
+      "precio": 5800
+    },
+    {
+      "id": "fn-233",
+      "cineId": "cin-038",
+      "peliculaId": 155,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "13:00",
+        "15:45",
+        "20:45",
+        "22:00",
+        "23:30"
+      ],
+      "formato": "2D",
+      "idioma": "Subtitulada",
+      "precio": 3500
+    },
+    {
+      "id": "fn-234",
+      "cineId": "cin-039",
+      "peliculaId": 157336,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "17:00",
+        "18:15",
+        "20:45",
+        "22:45"
+      ],
+      "formato": "2D",
+      "idioma": "Doblada",
+      "precio": 3800
+    },
+    {
+      "id": "fn-235",
+      "cineId": "cin-039",
+      "peliculaId": 550,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "13:00",
+        "14:30",
+        "15:45",
+        "20:45",
+        "23:30"
+      ],
+      "formato": "3D",
+      "idioma": "Doblada",
+      "precio": 4900
+    },
+    {
+      "id": "fn-236",
+      "cineId": "cin-039",
+      "peliculaId": 27205,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "13:00",
+        "18:15",
+        "19:30",
+        "22:00"
+      ],
+      "formato": "IMAX",
+      "idioma": "Subtitulada",
+      "precio": 5600
+    },
+    {
+      "id": "fn-237",
+      "cineId": "cin-039",
+      "peliculaId": 27205,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "13:00",
+        "15:45",
+        "22:00",
+        "23:30"
+      ],
+      "formato": "IMAX",
+      "idioma": "Subtitulada",
+      "precio": 5500
+    },
+    {
+      "id": "fn-238",
+      "cineId": "cin-039",
+      "peliculaId": 872585,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "13:00",
+        "14:30",
+        "15:45",
+        "22:00",
+        "22:45"
+      ],
+      "formato": "2D",
+      "idioma": "Doblada",
+      "precio": 3700
+    },
+    {
+      "id": "fn-239",
+      "cineId": "cin-039",
+      "peliculaId": 872585,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "13:00",
+        "18:15",
+        "20:45",
+        "23:30"
+      ],
+      "formato": "2D",
+      "idioma": "Subtitulada",
+      "precio": 3900
+    },
+    {
+      "id": "fn-240",
+      "cineId": "cin-040",
+      "peliculaId": 680,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "14:30",
+        "19:30",
+        "22:00",
+        "22:45",
+        "23:30"
+      ],
+      "formato": "IMAX",
+      "idioma": "Subtitulada",
+      "precio": 5700
+    },
+    {
+      "id": "fn-241",
+      "cineId": "cin-040",
+      "peliculaId": 550,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "13:00",
+        "15:45",
+        "19:30",
+        "20:45",
+        "22:45"
+      ],
+      "formato": "2D",
+      "idioma": "Subtitulada",
+      "precio": 3500
+    },
+    {
+      "id": "fn-242",
+      "cineId": "cin-040",
+      "peliculaId": 299536,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "19:30",
+        "22:00",
+        "22:45"
+      ],
+      "formato": "3D",
+      "idioma": "Doblada",
+      "precio": 4600
+    },
+    {
+      "id": "fn-243",
+      "cineId": "cin-040",
+      "peliculaId": 346698,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "17:00",
+        "18:15",
+        "20:45",
+        "22:00",
+        "22:45"
+      ],
+      "formato": "2D",
+      "idioma": "Doblada",
+      "precio": 3500
+    },
+    {
+      "id": "fn-244",
+      "cineId": "cin-040",
+      "peliculaId": 157336,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "17:00",
+        "22:45",
+        "23:30"
+      ],
+      "formato": "2D",
+      "idioma": "Doblada",
+      "precio": 3900
+    },
+    {
+      "id": "fn-245",
+      "cineId": "cin-041",
+      "peliculaId": 787699,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "13:00",
+        "14:30",
+        "17:00",
+        "20:45",
+        "22:00"
+      ],
+      "formato": "2D",
+      "idioma": "Doblada",
+      "precio": 3800
+    },
+    {
+      "id": "fn-246",
+      "cineId": "cin-041",
+      "peliculaId": 787699,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "13:00",
+        "20:45",
+        "23:30"
+      ],
+      "formato": "2D",
+      "idioma": "Doblada",
+      "precio": 3900
+    },
+    {
+      "id": "fn-247",
+      "cineId": "cin-041",
+      "peliculaId": 872585,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "14:30",
+        "22:45",
+        "23:30"
+      ],
+      "formato": "3D",
+      "idioma": "Subtitulada",
+      "precio": 4500
+    },
+    {
+      "id": "fn-248",
+      "cineId": "cin-041",
+      "peliculaId": 299536,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "13:00",
+        "14:30",
+        "20:45",
+        "22:45"
+      ],
+      "formato": "3D",
+      "idioma": "Subtitulada",
+      "precio": 4600
+    },
+    {
+      "id": "fn-249",
+      "cineId": "cin-041",
+      "peliculaId": 299536,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "14:30",
+        "18:15",
+        "19:30",
+        "20:45"
+      ],
+      "formato": "2D",
+      "idioma": "Subtitulada",
+      "precio": 3800
+    },
+    {
+      "id": "fn-250",
+      "cineId": "cin-041",
+      "peliculaId": 438631,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "14:30",
+        "19:30",
+        "20:45",
+        "22:00",
+        "23:30"
+      ],
+      "formato": "2D",
+      "idioma": "Subtitulada",
+      "precio": 3900
+    },
+    {
+      "id": "fn-251",
+      "cineId": "cin-042",
+      "peliculaId": 155,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "14:30",
+        "17:00",
+        "20:45",
+        "22:45",
+        "23:30"
+      ],
+      "formato": "2D",
+      "idioma": "Subtitulada",
+      "precio": 3900
+    },
+    {
+      "id": "fn-252",
+      "cineId": "cin-042",
+      "peliculaId": 157336,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "14:30",
+        "15:45",
+        "17:00",
+        "18:15",
+        "22:00"
+      ],
+      "formato": "3D",
+      "idioma": "Subtitulada",
+      "precio": 4600
+    },
+    {
+      "id": "fn-253",
+      "cineId": "cin-042",
+      "peliculaId": 872585,
+      "fecha": "2026-04-21",
+      "horarios": [
+        "13:00",
+        "18:15",
+        "20:45",
+        "22:00",
+        "22:45"
+      ],
+      "formato": "3D",
+      "idioma": "Subtitulada",
+      "precio": 4500
     }
   ]
 }

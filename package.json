@@ -9,7 +9,10 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "fetch-cinemas": "node scripts/fetch-cinemas.mjs",
+    "generate-showtimes": "node scripts/generate-showtimes.mjs",
+    "generate-data": "npm run fetch-cinemas && npm run generate-showtimes"
   },
   "dependencies": {
     "astro": "^4.16.0"

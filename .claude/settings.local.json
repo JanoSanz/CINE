@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(node scripts/fetch-cinemas.mjs)",
+      "Bash(node scripts/generate-showtimes.mjs)",
+      "Bash(npm run *)"
+    ]
+  }
+}

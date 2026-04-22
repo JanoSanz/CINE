@@ -41,8 +41,25 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   const state = {
     showtimesByCinema: [],
     zone: '',
-    filters: { formato: null, idioma: null }
+    filters: { formato: null, idioma: null, precio: null, franja: null }
   };
+
+  const PRECIO_BUCKETS = [
+    { value: 'barato',  label: 'Hasta $4000',  test: (p) => p < 4000 },
+    { value: 'medio',   label: '$4000 - $5000', test: (p) => p >= 4000 && p <= 5000 },
+    { value: 'premium', label: 'Más de $5000',  test: (p) => p > 5000 }
+  ];
+
+  const FRANJAS = [
+    { value: 'manana', label: 'Mañana',  test: (m) => m < 13 * 60 },
+    { value: 'tarde',  label: 'Tarde',   test: (m) => m >= 13 * 60 && m < 19 * 60 },
+    { value: 'noche',  label: 'Noche',   test: (m) => m >= 19 * 60 }
+  ];
+
+  function toMinutes(hhmm) {
+    const [h, m] = String(hhmm).split(':').map(Number);
+    return h * 60 + (m || 0);
+  }
 
   if (!movieId) {
     renderError('Falta el ID de la pelicula en la URL.');
@@ -68,26 +85,54 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   function collectOptions(items) {
     const formatos = new Set();
     const idiomas = new Set();
+    const precios = new Set();
+    const franjas = new Set();
+
     for (const { funciones } of items) {
       for (const fn of funciones) {
         if (fn.formato) formatos.add(fn.formato);
         if (fn.idioma) idiomas.add(fn.idioma);
+
+        const bucket = PRECIO_BUCKETS.find((b) => b.test(fn.precio));
+        if (bucket) precios.add(bucket.value);
+
+        for (const h of fn.horarios || []) {
+          const min = toMinutes(h);
+          const franja = FRANJAS.find((f) => f.test(min));
+          if (franja) franjas.add(franja.value);
+        }
       }
     }
-    return { formatos: [...formatos], idiomas: [...idiomas] };
+    return {
+      formatos: [...formatos],
+      idiomas: [...idiomas],
+      precios: PRECIO_BUCKETS.filter((b) => precios.has(b.value)),
+      franjas: FRANJAS.filter((f) => franjas.has(f.value))
+    };
   }
 
   function applyFilters(items) {
-    const { formato, idioma } = state.filters;
-    if (!formato && !idioma) return items;
+    const { formato, idioma, precio, franja } = state.filters;
+    if (!formato && !idioma && !precio && !franja) return items;
+
+    const precioBucket = precio ? PRECIO_BUCKETS.find((b) => b.value === precio) : null;
+    const franjaDef = franja ? FRANJAS.find((f) => f.value === franja) : null;
 
     return items
       .map(({ cinema, funciones }) => ({
         cinema,
-        funciones: funciones.filter((fn) =>
-          (!formato || fn.formato === formato) &&
-          (!idioma || fn.idioma === idioma)
-        )
+        funciones: funciones
+          .filter((fn) =>
+            (!formato || fn.formato === formato) &&
+            (!idioma || fn.idioma === idioma) &&
+            (!precioBucket || precioBucket.test(fn.precio))
+          )
+          .map((fn) => {
+            if (!franjaDef) return fn;
+            const horarios = (fn.horarios || []).filter((h) => franjaDef.test(toMinutes(h)));
+            return horarios.length ? { ...fn, horarios } : null;
+          })
+          .filter(Boolean)
       }))
       .filter(({ funciones }) => funciones.length > 0);
   }
@@ -131,13 +176,19 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   }
 
   function renderFilters(options) {
-    if (!options.formatos.length && !options.idiomas.length) return '';
-    const { formato, idioma } = state.filters;
+    const hasAny = options.formatos.length || options.idiomas.length
+                || options.precios.length || options.franjas.length;
+    if (!hasAny) return '';
+    const { formato, idioma, precio, franja } = state.filters;
 
-    const chip = (type, value, active) => `
+    const chip = (type, value, label, active) => `
       <button class="chip ${active ? 'chip--active' : ''}" data-filter-type="${type}" data-filter-value="${escapeHtml(value)}">
-        ${escapeHtml(value)}
+        ${escapeHtml(label)}
       </button>
+    `;
+
+    const reset = (type, active) => `
+      <button class="chip ${active ? 'chip--active' : ''}" data-filter-type="${type}" data-filter-value="">Todos</button>
     `;
 
     return `
@@ -145,15 +196,29 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         ${options.formatos.length ? `
           <div class="filters__group">
             <span class="filters__label">Formato:</span>
-            <button class="chip ${!formato ? 'chip--active' : ''}" data-filter-type="formato" data-filter-value="">Todos</button>
-            ${options.formatos.map((f) => chip('formato', f, formato === f)).join('')}
+            ${reset('formato', !formato)}
+            ${options.formatos.map((f) => chip('formato', f, f, formato === f)).join('')}
           </div>
         ` : ''}
         ${options.idiomas.length ? `
           <div class="filters__group">
             <span class="filters__label">Idioma:</span>
-            <button class="chip ${!idioma ? 'chip--active' : ''}" data-filter-type="idioma" data-filter-value="">Todos</button>
-            ${options.idiomas.map((i) => chip('idioma', i, idioma === i)).join('')}
+            ${reset('idioma', !idioma)}
+            ${options.idiomas.map((i) => chip('idioma', i, i, idioma === i)).join('')}
+          </div>
+        ` : ''}
+        ${options.precios.length ? `
+          <div class="filters__group">
+            <span class="filters__label">Precio:</span>
+            ${reset('precio', !precio)}
+            ${options.precios.map((p) => chip('precio', p.value, p.label, precio === p.value)).join('')}
+          </div>
+        ` : ''}
+        ${options.franjas.length ? `
+          <div class="filters__group">
+            <span class="filters__label">Franja:</span>
+            ${reset('franja', !franja)}
+            ${options.franjas.map((f) => chip('franja', f.value, f.label, franja === f.value)).join('')}
           </div>
         ` : ''}
       </div>

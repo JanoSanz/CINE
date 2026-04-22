@@ -91,6 +91,21 @@ Abri [http://localhost:4321](http://localhost:4321).
 | `npm run dev` | Servidor de desarrollo con hot reload |
 | `npm run build` | Build de produccion en `dist/` |
 | `npm run preview` | Previsualizar el build localmente |
+| `npm run fetch-cinemas` | Baja cines reales de OpenStreetMap (Overpass API) |
+| `npm run generate-showtimes` | Genera funciones para los cines existentes |
+| `npm run generate-data` | Corre los dos anteriores en orden |
+
+### Regenerar el dataset de cines
+
+El JSON de cines esta versionado para que la app funcione sin configuracion extra, pero se puede regenerar automaticamente desde OpenStreetMap:
+
+```bash
+npm run generate-data
+```
+
+Eso consulta la API de **Overpass** con `amenity=cinema` en Argentina, clasifica cada cine por zona (CABA / Zona Norte / Sur / Oeste / Cordoba / Rosario) y escribe `public/data/cines.json`. Despues, `generate-showtimes` asigna a cada cine entre 3 y 5 peliculas con horarios, formato, idioma y precio randomizados pero coherentes.
+
+> No requiere API key ni dependencias: usa `fetch` nativo de Node 18+.
 
 ## Estructura del proyecto
 
@@ -151,17 +166,19 @@ cinecerca/
 
 ## Deploy
 
-### Vercel
+### Vercel (recomendado)
 
 1. Conectar el repo en [vercel.com](https://vercel.com).
-2. En Settings > Environment Variables agregar `PUBLIC_TMDB_API_KEY`.
+2. En **Settings > Environment Variables** agregar `TMDB_API_KEY` (sin prefijo `PUBLIC_`).
 3. Deploy automatico en cada push a `main`.
+
+En produccion el cliente no llama a TMDB directamente: pega a `/api/tmdb`, una **serverless function** definida en [api/tmdb.js](api/tmdb.js) que agrega la API key desde el servidor. Asi la key nunca viaja al browser. En desarrollo local (`npm run dev`) se usa `PUBLIC_TMDB_API_KEY` para evitar levantar el runtime de Vercel.
 
 ### Netlify
 
 1. Conectar el repo en [netlify.com](https://netlify.com).
 2. Build command: `npm run build` | Publish directory: `dist`.
-3. Agregar `PUBLIC_TMDB_API_KEY` en Environment variables.
+3. Agregar `PUBLIC_TMDB_API_KEY` en Environment variables (Netlify Functions soporta el proxy, pero esta config usa la key publica para simplicidad).
 
 ## Roadmap
 
@@ -172,8 +189,9 @@ cinecerca/
 - [x] Filtros dinamicos (formato, idioma) en detalle de pelicula
 - [x] Mapa embebido con Leaflet y tiles adaptativos al tema
 - [x] Tema claro / oscuro con persistencia
-- [ ] Filtros extra (genero, precio, franja horaria)
-- [ ] Proxy de TMDB con Vercel Serverless Functions (ocultar API key)
+- [x] Filtros extra en detalle (precio y franja horaria)
+- [x] Proxy de TMDB con Vercel Serverless Functions (ocultar API key)
+- [ ] Filtro de genero en resultados de busqueda
 - [ ] Migracion del JSON de cines a Supabase
 - [ ] Tests con Vitest
 
@@ -183,4 +201,4 @@ MIT
 
 ## Autor
 
-Tu nombre aca.
+Jano Lorenzo Sanz

@@ -1,25 +1,49 @@
-const API_KEY = import.meta.env.PUBLIC_TMDB_API_KEY;
+// src/scripts/api.js
+// Cliente de TMDB. En desarrollo pega directo a la API con la key publica
+// (PUBLIC_TMDB_API_KEY) para que `npm run dev` funcione sin infra extra.
+// En produccion pega al proxy serverless /api/tmdb, que agrega la key desde
+// el servidor (TMDB_API_KEY) y la mantiene fuera del cliente.
+
+const DIRECT_KEY = import.meta.env.PUBLIC_TMDB_API_KEY;
+const USE_PROXY = !import.meta.env.DEV;
+
 const BASE_URL = 'https://api.themoviedb.org/3';
+const PROXY_URL = '/api/tmdb';
 const IMG_BASE = 'https://image.tmdb.org/t/p';
 const LANG = 'es-AR';
 
 async function request(path, params = {}) {
-  if (!API_KEY) {
-    throw new Error('Falta PUBLIC_TMDB_API_KEY. Copia .env.example a .env y agrega tu API key de TMDB.');
-  }
+  const url = USE_PROXY
+    ? buildProxyUrl(path, params)
+    : buildDirectUrl(path, params);
 
-  const url = new URL(`${BASE_URL}${path}`);
-  url.searchParams.set('api_key', API_KEY);
-  url.searchParams.set('language', LANG);
-  for (const [key, value] of Object.entries(params)) {
-    if (value != null) url.searchParams.set(key, value);
-  }
-
-  const res = await fetch(url.toString());
+  const res = await fetch(url);
   if (!res.ok) {
     throw new Error(`Error ${res.status} al consultar TMDB`);
   }
   return res.json();
+}
+
+function buildProxyUrl(path, params) {
+  const url = new URL(PROXY_URL, window.location.origin);
+  url.searchParams.set('path', path);
+  for (const [key, value] of Object.entries(params)) {
+    if (value != null) url.searchParams.set(key, value);
+  }
+  return url.toString();
+}
+
+function buildDirectUrl(path, params) {
+  if (!DIRECT_KEY) {
+    throw new Error('Falta PUBLIC_TMDB_API_KEY en .env para desarrollo local.');
+  }
+  const url = new URL(`${BASE_URL}${path}`);
+  url.searchParams.set('api_key', DIRECT_KEY);
+  url.searchParams.set('language', LANG);
+  for (const [key, value] of Object.entries(params)) {
+    if (value != null) url.searchParams.set(key, value);
+  }
+  return url.toString();
 }
 
 export function searchMovies(query, page = 1) {

@@ -2,103 +2,549 @@
   "cines": [
     {
       "id": "cin-001",
-      "nombre": "Hoyts Abasto",
+      "nombre": "Atlas Avellaneda",
       "ciudad": "Buenos Aires",
       "zona": "CABA",
-      "direccion": "Av. Corrientes 3247",
-      "coordenadas": { "lat": -34.6038, "lng": -58.4106 },
-      "telefono": "+54 11 4959-3400",
-      "salas": 12
+      "direccion": "",
+      "coordenadas": {
+        "lat": -34.67627,
+        "lng": -58.36783
+      },
+      "telefono": "",
+      "salas": 6
     },
     {
       "id": "cin-002",
-      "nombre": "Cinepolis Recoleta",
-      "ciudad": "Buenos Aires",
+      "nombre": "Atlas Caballito",
+      "ciudad": "Ciudad Autónoma de Buenos Aires",
       "zona": "CABA",
-      "direccion": "Vicente Lopez 2050",
-      "coordenadas": { "lat": -34.5875, "lng": -58.3927 },
-      "telefono": "+54 11 4806-1000",
-      "salas": 10
-    },
-    {
-      "id": "cin-003",
-      "nombre": "Cinemark Palermo",
-      "ciudad": "Buenos Aires",
-      "zona": "CABA",
-      "direccion": "Beruti 3399",
-      "coordenadas": { "lat": -34.5847, "lng": -58.4098 },
-      "telefono": "+54 11 4827-9500",
-      "salas": 8
-    },
-    {
-      "id": "cin-004",
-      "nombre": "Showcase Belgrano",
-      "ciudad": "Buenos Aires",
-      "zona": "CABA",
-      "direccion": "Monroe 1655",
-      "coordenadas": { "lat": -34.5626, "lng": -58.4580 },
-      "telefono": "+54 11 4788-3300",
+      "direccion": "Avenida Rivadavia 5071",
+      "coordenadas": {
+        "lat": -34.618295,
+        "lng": -58.437474
+      },
+      "telefono": "",
       "salas": 9
     },
     {
+      "id": "cin-003",
+      "nombre": "Atlas Lavalle",
+      "ciudad": "Buenos Aires",
+      "zona": "CABA",
+      "direccion": "",
+      "coordenadas": {
+        "lat": -34.602055,
+        "lng": -58.376271
+      },
+      "telefono": "",
+      "salas": 6
+    },
+    {
+      "id": "cin-004",
+      "nombre": "Atlas Liniers",
+      "ciudad": "Buenos Aires",
+      "zona": "CABA",
+      "direccion": "",
+      "coordenadas": {
+        "lat": -34.639999,
+        "lng": -58.52683
+      },
+      "telefono": "",
+      "salas": 6
+    },
+    {
       "id": "cin-005",
-      "nombre": "Hoyts Unicenter",
-      "ciudad": "Martinez",
-      "zona": "Zona Norte",
-      "direccion": "Paraná 3745",
-      "coordenadas": { "lat": -34.5108, "lng": -58.5243 },
-      "telefono": "+54 11 4733-1234",
-      "salas": 16
+      "nombre": "Atlas Rivera Indarte",
+      "ciudad": "Buenos Aires",
+      "zona": "CABA",
+      "direccion": "",
+      "coordenadas": {
+        "lat": -34.629279,
+        "lng": -58.462168
+      },
+      "telefono": "",
+      "salas": 6
     },
     {
       "id": "cin-006",
-      "nombre": "Cinemark San Justo",
-      "ciudad": "San Justo",
-      "zona": "Zona Oeste",
-      "direccion": "Av. Brigadier Juan M. de Rosas 3910",
-      "coordenadas": { "lat": -34.6783, "lng": -58.5612 },
-      "telefono": "+54 11 4484-5000",
-      "salas": 10
+      "nombre": "Belgrano Multiplex",
+      "ciudad": "Ciudad Autónoma de Buenos Aires",
+      "zona": "CABA",
+      "direccion": "Vuelta de Obligado 2199",
+      "coordenadas": {
+        "lat": -34.560543,
+        "lng": -58.456287
+      },
+      "telefono": "",
+      "salas": 5
     },
     {
       "id": "cin-007",
-      "nombre": "Showcase Quilmes",
-      "ciudad": "Quilmes",
-      "zona": "Zona Sur",
-      "direccion": "Av. Calchaquí 3950",
-      "coordenadas": { "lat": -34.7406, "lng": -58.2745 },
-      "telefono": "+54 11 4270-8000",
-      "salas": 14
+      "nombre": "Belgrano Multiplex - Salas 4, 5 y 6",
+      "ciudad": "Ciudad Autónoma de Buenos Aires",
+      "zona": "CABA",
+      "direccion": "Vuelta de Obligado 2238",
+      "coordenadas": {
+        "lat": -34.560282,
+        "lng": -58.456865
+      },
+      "telefono": "",
+      "salas": 3
     },
     {
       "id": "cin-008",
-      "nombre": "Cinepolis Avellaneda",
-      "ciudad": "Avellaneda",
-      "zona": "Zona Sur",
-      "direccion": "Guemes 897",
-      "coordenadas": { "lat": -34.6625, "lng": -58.3650 },
-      "telefono": "+54 11 4203-1500",
-      "salas": 8
+      "nombre": "Cine Aconcagua",
+      "ciudad": "Ciudad Autónoma de Buenos Aires",
+      "zona": "CABA",
+      "direccion": "Avenida General Mosconi",
+      "coordenadas": {
+        "lat": -34.590258,
+        "lng": -58.508079
+      },
+      "telefono": "",
+      "salas": 6
     },
     {
       "id": "cin-009",
-      "nombre": "Cinemark Nuevo Centro",
-      "ciudad": "Cordoba",
-      "zona": "Cordoba",
-      "direccion": "Av. Duarte Quiros 1400",
-      "coordenadas": { "lat": -31.4134, "lng": -64.2014 },
-      "telefono": "+54 351 489-1000",
-      "salas": 10
+      "nombre": "Cine Cosmos UBA",
+      "ciudad": "Ciudad Autónoma de Buenos Aires",
+      "zona": "CABA",
+      "direccion": "Avenida Corrientes 2046",
+      "coordenadas": {
+        "lat": -34.604659,
+        "lng": -58.396069
+      },
+      "telefono": "+54 11 4953-5405",
+      "salas": 6
     },
     {
       "id": "cin-010",
-      "nombre": "Showcase Rosario",
+      "nombre": "Cine Lorca",
+      "ciudad": "Ciudad Autónoma de Buenos Aires",
+      "zona": "CABA",
+      "direccion": "Avenida Corrientes 1428",
+      "coordenadas": {
+        "lat": -34.604146,
+        "lng": -58.386992
+      },
+      "telefono": "+54 11 4371-5017",
+      "salas": 6
+    },
+    {
+      "id": "cin-011",
+      "nombre": "Cine y Teatros Premier",
+      "ciudad": "Ciudad Autónoma de Buenos Aires",
+      "zona": "CABA",
+      "direccion": "Avenida Corrientes 1565",
+      "coordenadas": {
+        "lat": -34.603831,
+        "lng": -58.388952
+      },
+      "telefono": "",
+      "salas": 6
+    },
+    {
+      "id": "cin-012",
+      "nombre": "Cinearte Cocodelphia",
+      "ciudad": "Buenos Aires",
+      "zona": "CABA",
+      "direccion": "",
+      "coordenadas": {
+        "lat": -34.603348,
+        "lng": -58.382761
+      },
+      "telefono": "",
+      "salas": 6
+    },
+    {
+      "id": "cin-013",
+      "nombre": "Cinema Devoto",
+      "ciudad": "Ciudad Autónoma de Buenos Aires",
+      "zona": "CABA",
+      "direccion": "Quevedo 3365",
+      "coordenadas": {
+        "lat": -34.611689,
+        "lng": -58.517125
+      },
+      "telefono": "+54 11 4019-6060",
+      "salas": 6
+    },
+    {
+      "id": "cin-014",
+      "nombre": "Cinemark Caballito",
+      "ciudad": "Ciudad Autónoma de Buenos Aires",
+      "zona": "CABA",
+      "direccion": "Avenida La Plata 96",
+      "coordenadas": {
+        "lat": -34.616325,
+        "lng": -58.428714
+      },
+      "telefono": "",
+      "salas": 6
+    },
+    {
+      "id": "cin-015",
+      "nombre": "Cinemark Palermo",
+      "ciudad": "Ciudad Autónoma de Buenos Aires",
+      "zona": "CABA",
+      "direccion": "Beruti 3399",
+      "coordenadas": {
+        "lat": -34.586505,
+        "lng": -58.410186
+      },
+      "telefono": "",
+      "salas": 6
+    },
+    {
+      "id": "cin-016",
+      "nombre": "Cinemark Puerto Madero",
+      "ciudad": "Ciudad Autónoma de Buenos Aires",
+      "zona": "CABA",
+      "direccion": "Avenida Alicia Moreau de Justo 1920",
+      "coordenadas": {
+        "lat": -34.621046,
+        "lng": -58.364916
+      },
+      "telefono": "",
+      "salas": 6
+    },
+    {
+      "id": "cin-017",
+      "nombre": "Cinépolis",
+      "ciudad": "Buenos Aires",
+      "zona": "CABA",
+      "direccion": "",
+      "coordenadas": {
+        "lat": -34.599412,
+        "lng": -58.398276
+      },
+      "telefono": "",
+      "salas": 6
+    },
+    {
+      "id": "cin-018",
+      "nombre": "Cinépolis Recoleta",
+      "ciudad": "Ciudad Autónoma de Buenos Aires",
+      "zona": "CABA",
+      "direccion": "Vicente López 2050",
+      "coordenadas": {
+        "lat": -34.589118,
+        "lng": -58.393898
+      },
+      "telefono": "",
+      "salas": 6
+    },
+    {
+      "id": "cin-019",
+      "nombre": "Cines Patio Bullrich",
+      "ciudad": "Ciudad Autónoma de Buenos Aires",
+      "zona": "CABA",
+      "direccion": "Avenida Del Libertador 750",
+      "coordenadas": {
+        "lat": -34.588509,
+        "lng": -58.383592
+      },
+      "telefono": "",
+      "salas": 6
+    },
+    {
+      "id": "cin-020",
+      "nombre": "Complejo Tita Merello",
+      "ciudad": "Buenos Aires",
+      "zona": "CABA",
+      "direccion": "Suipacha 442",
+      "coordenadas": {
+        "lat": -34.603117,
+        "lng": -58.379599
+      },
+      "telefono": "",
+      "salas": 6
+    },
+    {
+      "id": "cin-021",
+      "nombre": "Espacio INCAA Arte Cinema",
+      "ciudad": "Ciudad Autónoma de Buenos Aires",
+      "zona": "CABA",
+      "direccion": "Salta 1620",
+      "coordenadas": {
+        "lat": -34.627113,
+        "lng": -58.382719
+      },
+      "telefono": "",
+      "salas": 6
+    },
+    {
+      "id": "cin-022",
+      "nombre": "Espacio INCAA KM 0 - Gaumont",
+      "ciudad": "Ciudad Autónoma de Buenos Aires",
+      "zona": "CABA",
+      "direccion": "Avenida Rivadavia 1635",
+      "coordenadas": {
+        "lat": -34.608888,
+        "lng": -58.389625
+      },
+      "telefono": "+54 11 4381-0003",
+      "salas": 6
+    },
+    {
+      "id": "cin-023",
+      "nombre": "Espacio INCAA Km. 2 - Teatro \"La Máscara\"",
+      "ciudad": "Ciudad Autónoma de Buenos Aires",
+      "zona": "CABA",
+      "direccion": "Piedras 736",
+      "coordenadas": {
+        "lat": -34.616532,
+        "lng": -58.377395
+      },
+      "telefono": "+54 11 4307-0566",
+      "salas": 6
+    },
+    {
+      "id": "cin-024",
+      "nombre": "Hoyts",
+      "ciudad": "Ciudad Autónoma de Buenos Aires",
+      "zona": "CABA",
+      "direccion": "Vedia 3626",
+      "coordenadas": {
+        "lat": -34.546913,
+        "lng": -58.487695
+      },
+      "telefono": "",
+      "salas": 10
+    },
+    {
+      "id": "cin-025",
+      "nombre": "Hoyts Abasto",
+      "ciudad": "Ciudad Autónoma de Buenos Aires",
+      "zona": "CABA",
+      "direccion": "",
+      "coordenadas": {
+        "lat": -34.602563,
+        "lng": -58.410571
+      },
+      "telefono": "",
+      "salas": 6
+    },
+    {
+      "id": "cin-026",
+      "nombre": "Multiplex Monumental Lavalle",
+      "ciudad": "Buenos Aires",
+      "zona": "CABA",
+      "direccion": "Lavalle 780",
+      "coordenadas": {
+        "lat": -34.602422,
+        "lng": -58.37779
+      },
+      "telefono": "",
+      "salas": 6
+    },
+    {
+      "id": "cin-027",
+      "nombre": "Showcase Cinemas",
+      "ciudad": "Ciudad Autónoma de Buenos Aires",
+      "zona": "CABA",
+      "direccion": "Monroe 1655",
+      "coordenadas": {
+        "lat": -34.55352,
+        "lng": -58.453253
+      },
+      "telefono": "+54 11 4780-3334",
+      "salas": 6
+    },
+    {
+      "id": "cin-028",
+      "nombre": "Taricco",
+      "ciudad": "Ciudad Autónoma de Buenos Aires",
+      "zona": "CABA",
+      "direccion": "Avenida San Martín",
+      "coordenadas": {
+        "lat": -34.60349,
+        "lng": -58.461018
+      },
+      "telefono": "",
+      "salas": 6
+    },
+    {
+      "id": "cin-029",
+      "nombre": "Cinemark",
       "ciudad": "Rosario",
       "zona": "Rosario",
-      "direccion": "Av. Eva Peron 5856",
-      "coordenadas": { "lat": -32.9634, "lng": -60.6505 },
-      "telefono": "+54 341 430-8800",
-      "salas": 12
+      "direccion": "Nansen 323",
+      "coordenadas": {
+        "lat": -32.910821,
+        "lng": -60.682956
+      },
+      "telefono": "",
+      "salas": 6
+    },
+    {
+      "id": "cin-030",
+      "nombre": "Cines del Siglo",
+      "ciudad": "Rosario",
+      "zona": "Rosario",
+      "direccion": "Rioja",
+      "coordenadas": {
+        "lat": -32.945893,
+        "lng": -60.646019
+      },
+      "telefono": "+54 341 425-0761;+54 341 530-7007",
+      "salas": 6
+    },
+    {
+      "id": "cin-031",
+      "nombre": "El Cairo",
+      "ciudad": "Rosario",
+      "zona": "Rosario",
+      "direccion": "Santa Fe 1120",
+      "coordenadas": {
+        "lat": -32.944849,
+        "lng": -60.638234
+      },
+      "telefono": "+54 341 472-1851",
+      "salas": 6
+    },
+    {
+      "id": "cin-032",
+      "nombre": "Nuevo Monumental",
+      "ciudad": "Rosario",
+      "zona": "Rosario",
+      "direccion": "Peatonal San Martín 993",
+      "coordenadas": {
+        "lat": -32.949054,
+        "lng": -60.636884
+      },
+      "telefono": "+54 341 421-6289",
+      "salas": 6
+    },
+    {
+      "id": "cin-033",
+      "nombre": "Atlas",
+      "ciudad": "San Miguel de Tucumán",
+      "zona": "Zona Norte",
+      "direccion": "Monteagudo 250",
+      "coordenadas": {
+        "lat": -26.828369,
+        "lng": -65.199798
+      },
+      "telefono": "+543814337702",
+      "salas": 6
+    },
+    {
+      "id": "cin-034",
+      "nombre": "Cine York",
+      "ciudad": "Olivos",
+      "zona": "Zona Norte",
+      "direccion": "Juan Bautista Alberdi 895",
+      "coordenadas": {
+        "lat": -34.507674,
+        "lng": -58.484953
+      },
+      "telefono": "+54 11 4711-9213",
+      "salas": 6
+    },
+    {
+      "id": "cin-035",
+      "nombre": "Cinemacenter",
+      "ciudad": "San Fernando del Valle de Catamarca",
+      "zona": "Zona Norte",
+      "direccion": "Avenida Güemes 856",
+      "coordenadas": {
+        "lat": -28.475606,
+        "lng": -65.775053
+      },
+      "telefono": "",
+      "salas": 6
+    },
+    {
+      "id": "cin-036",
+      "nombre": "Cinemark Hoyts",
+      "ciudad": "Martinez",
+      "zona": "Zona Norte",
+      "direccion": "Paraná 3745",
+      "coordenadas": {
+        "lat": -34.508643,
+        "lng": -58.523676
+      },
+      "telefono": "",
+      "salas": 6
+    },
+    {
+      "id": "cin-037",
+      "nombre": "Imax Theatre",
+      "ciudad": "Olivos",
+      "zona": "Zona Norte",
+      "direccion": "Esteban Echeverría 3750",
+      "coordenadas": {
+        "lat": -34.514424,
+        "lng": -58.523672
+      },
+      "telefono": "+54 11 4756-7676",
+      "salas": 6
+    },
+    {
+      "id": "cin-038",
+      "nombre": "Cine-Teatro Helios",
+      "ciudad": "Ciudad Jardín Lomas de El Palomar",
+      "zona": "Zona Oeste",
+      "direccion": "737 - Boulevard General Don José de San Martín 3076",
+      "coordenadas": {
+        "lat": -34.604045,
+        "lng": -58.592709
+      },
+      "telefono": "",
+      "salas": 6
+    },
+    {
+      "id": "cin-039",
+      "nombre": "Cine-Teatro Paramount",
+      "ciudad": "Caseros",
+      "zona": "Zona Oeste",
+      "direccion": "647 - 3 de Febrero 2561",
+      "coordenadas": {
+        "lat": -34.605424,
+        "lng": -58.564129
+      },
+      "telefono": "",
+      "salas": 6
+    },
+    {
+      "id": "cin-040",
+      "nombre": "Ex-Cine San Carlos",
+      "ciudad": "Caseros",
+      "zona": "Zona Oeste",
+      "direccion": "618 - Bartolomé Mitre 5545",
+      "coordenadas": {
+        "lat": -34.609102,
+        "lng": -58.577657
+      },
+      "telefono": "",
+      "salas": 6
+    },
+    {
+      "id": "cin-041",
+      "nombre": "Nuevo Cine Ciudadela",
+      "ciudad": "Ciudadela",
+      "zona": "Zona Oeste",
+      "direccion": "201 - Avenida Maipú 3927",
+      "coordenadas": {
+        "lat": -34.639467,
+        "lng": -58.541332
+      },
+      "telefono": "",
+      "salas": 6
+    },
+    {
+      "id": "cin-042",
+      "nombre": "Cinema Adrogue",
+      "ciudad": "Adrogué",
+      "zona": "Zona Sur",
+      "direccion": "Avenida Hipólito Yrigoyen 13200",
+      "coordenadas": {
+        "lat": -34.808287,
+        "lng": -58.401607
+      },
+      "telefono": "+54 11 4294-0744",
+      "salas": 6
     }
   ]
 }
