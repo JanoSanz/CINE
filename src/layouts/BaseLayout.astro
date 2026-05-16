@@ -12,7 +12,8 @@ const { title = 'CineCerca', description = 'Busca peliculas y encontra en que ci
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content={description} />
-    <meta name="theme-color" content="#0f1115" />
+    <meta name="theme-color" content="#110D08" media="(prefers-color-scheme: dark)" />
+    <meta name="theme-color" content="#F5EBD8" media="(prefers-color-scheme: light)" />
 
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
@@ -21,6 +22,12 @@ const { title = 'CineCerca', description = 'Busca peliculas y encontra en que ci
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="preconnect" href="https://image.tmdb.org" />
     <link rel="preconnect" href="https://api.themoviedb.org" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,400..900,0..100,0..1;1,9..144,400..900,0..100,0..1&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=JetBrains+Mono:wght@400;500;600&display=swap"
+    />
 
     <title>{title}</title>
 
@@ -37,6 +44,7 @@ const { title = 'CineCerca', description = 'Busca peliculas y encontra en que ci
     </script>
   </head>
   <body>
+    <div class="grain" aria-hidden="true"></div>
     <Header />
     <main id="main">
       <slot />
@@ -44,3 +52,22 @@ const { title = 'CineCerca', description = 'Busca peliculas y encontra en que ci
     <Footer />
   </body>
 </html>
+
+<style is:global>
+  /* Film grain overlay: SVG noise generado inline, mezclado segun tema.
+     fixed position + pointer-events:none asegura cero impacto en interaccion. */
+  .grain {
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    pointer-events: none;
+    opacity: var(--grain-opacity);
+    mix-blend-mode: var(--grain-blend);
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='280' height='280'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' seed='4' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.95 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+    background-size: 280px 280px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .grain { display: none; }
+  }
+</style>

@@ -15,6 +15,6 @@
     "generate-data": "npm run fetch-cinemas && npm run generate-showtimes"
   },
   "dependencies": {
-    "astro": "^4.16.0"
+    "astro": "^6.3.3"
   }
 }

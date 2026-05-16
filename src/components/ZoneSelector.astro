@@ -14,11 +14,19 @@
     color: var(--color-text);
     border: 1px solid var(--color-border);
     border-radius: var(--radius-md);
-    padding: 0.5rem 0.75rem;
-    font-size: 0.9rem;
-    min-width: 150px;
+    padding: 0.55rem 0.8rem;
+    font-family: var(--font-mono);
+    font-size: 0.74rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 500;
+    min-width: 160px;
     cursor: pointer;
+    transition: border-color var(--transition-fast);
   }
+
+  .zone-selector select:hover { border-color: var(--color-text-muted); }
+  .zone-selector select:focus { outline: none; border-color: var(--color-primary); }
 </style>
 
 <script>

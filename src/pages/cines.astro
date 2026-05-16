@@ -6,8 +6,9 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="" />
 
   <div class="container page">
-    <h1 class="page-title">Cines</h1>
-    <p class="text-muted page-sub">Listado de cines disponibles. Usa el selector de zona en el header para filtrar.</p>
+    <span class="eyebrow eyebrow--accent">03 &mdash; Directorio</span>
+    <h1 class="page-title">Cines en la cartelera.</h1>
+    <p class="text-muted page-sub">Listado completo, mapeado y filtrable por zona desde el header. Activa la geolocalizacion para ordenar por cercania.</p>
 
     <div class="actions">
       <button id="geo-btn" class="btn btn-ghost">📍 Ordenar por cercania</button>
@@ -242,14 +243,25 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     .cinema-list { grid-template-columns: repeat(2, 1fr); }
   }
 
-  .cinema-card__zone { margin: 0.25rem 0 0 0; font-size: 0.8rem; }
+  .cinema-card__zone {
+    margin: 0.4rem 0 0 0;
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
   .cinema-card__distance {
-    font-size: 0.8rem;
-    color: var(--color-text-soft);
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    color: var(--color-accent);
     white-space: nowrap;
-    background-color: var(--color-bg-elevated);
-    padding: 0.25rem 0.5rem;
-    border-radius: var(--radius-sm);
+    background-color: var(--color-accent-soft);
+    padding: 0.3rem 0.6rem;
+    border-radius: var(--radius-pill);
+    border: 1px solid var(--color-accent-soft);
     height: fit-content;
   }
 
@@ -259,5 +271,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     line-height: 1.4;
   }
 
-  .leaflet-popup-content strong { color: #111; }
+  .leaflet-popup-content strong {
+    color: #111;
+    font-family: var(--font-display);
+    font-size: 1rem;
+    font-weight: 500;
+  }
 </style>

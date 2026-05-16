@@ -1,60 +1,94 @@
+/* ---------------------------------------------------------------------------
+   CineCerca — design tokens.
+   Direccion estetica: "Cinema Marquee x Editorial". Paleta tinta-papel calida,
+   crimson de marquesina + acento ambar. Tipografia editorial (Fraunces) +
+   DM Sans + JetBrains Mono para horarios y precios.
+   --------------------------------------------------------------------------- */
+
 :root,
 [data-theme="dark"] {
-  --color-bg: #0f1115;
-  --color-bg-elevated: #171a21;
-  --color-surface: #1f232c;
-  --color-border: #2a2f3a;
+  /* superficie: tinta calida, NO gris-azulado generico */
+  --color-bg: #110D08;
+  --color-bg-elevated: #1C1812;
+  --color-surface: #25201A;
+  --color-border: #3A332A;
 
-  --color-text: #e8ebf0;
-  --color-text-muted: #9aa3b2;
-  --color-text-soft: #c7cdd8;
+  /* texto: crema/papel, NO blanco neutro */
+  --color-text: #F2E7D3;
+  --color-text-soft: #C9BCA3;
+  --color-text-muted: #8A7E68;
 
-  --color-primary: #e50914;
-  --color-primary-hover: #ff1a25;
-  --color-accent: #f5c518;
+  /* acentos: crimson de marquesina + ambar de bombita */
+  --color-primary: #E5252D;
+  --color-primary-hover: #FF3A42;
+  --color-primary-soft: rgba(229, 37, 45, 0.14);
+  --color-accent: #F0B43A;
+  --color-accent-soft: rgba(240, 180, 58, 0.16);
 
-  --color-header-bg: rgba(15, 17, 21, 0.85);
-  --color-hero-gradient: linear-gradient(180deg, rgba(229, 9, 20, 0.12), transparent 60%);
-  --color-backdrop-overlay: linear-gradient(180deg, rgba(15, 17, 21, 0.4), rgba(15, 17, 21, 1));
+  --color-header-bg: rgba(17, 13, 8, 0.78);
+  --color-hero-gradient: linear-gradient(180deg, rgba(229, 37, 45, 0.14), transparent 60%);
+  --color-backdrop-overlay: linear-gradient(180deg, rgba(17, 13, 8, 0.35), rgba(17, 13, 8, 0.98));
+
+  /* film grain overlay */
+  --grain-opacity: 0.05;
+  --grain-blend: overlay;
+
+  color-scheme: dark;
 }
 
 [data-theme="light"] {
-  --color-bg: #f6f7fa;
-  --color-bg-elevated: #ffffff;
-  --color-surface: #ffffff;
-  --color-border: #e3e6ec;
+  /* superficie: papel crema, NO blanco puro */
+  --color-bg: #F5EBD8;
+  --color-bg-elevated: #FFFDF6;
+  --color-surface: #FFFDF6;
+  --color-border: #E0D3B5;
 
-  --color-text: #111418;
-  --color-text-muted: #6b7280;
-  --color-text-soft: #374151;
+  --color-text: #1A1410;
+  --color-text-soft: #3D352B;
+  --color-text-muted: #7A6E5A;
 
-  --color-primary: #e50914;
-  --color-primary-hover: #c40810;
-  --color-accent: #d39e00;
+  --color-primary: #C81F2A;
+  --color-primary-hover: #A0181F;
+  --color-primary-soft: rgba(200, 31, 42, 0.10);
+  --color-accent: #C88A1A;
+  --color-accent-soft: rgba(200, 138, 26, 0.14);
 
-  --color-header-bg: rgba(255, 255, 255, 0.85);
-  --color-hero-gradient: linear-gradient(180deg, rgba(229, 9, 20, 0.08), transparent 60%);
-  --color-backdrop-overlay: linear-gradient(180deg, rgba(246, 247, 250, 0.4), rgba(246, 247, 250, 1));
+  --color-header-bg: rgba(245, 235, 216, 0.85);
+  --color-hero-gradient: linear-gradient(180deg, rgba(200, 31, 42, 0.08), transparent 60%);
+  --color-backdrop-overlay: linear-gradient(180deg, rgba(245, 235, 216, 0.35), rgba(245, 235, 216, 0.98));
+
+  --grain-opacity: 0.035;
+  --grain-blend: multiply;
+
+  color-scheme: light;
 }
 
 :root {
-  --color-success: #22c55e;
-  --color-error: #ef4444;
-  --color-warning: #f59e0b;
+  --color-success: #2F9E66;
+  --color-error: #D43A3A;
+  --color-warning: #E0A22E;
 
-  --radius-sm: 6px;
-  --radius-md: 10px;
-  --radius-lg: 16px;
+  /* radios: tarjetas mas suaves, chips mas redondos */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 14px;
+  --radius-pill: 999px;
 
-  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.25);
-  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.35);
-  --shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.45);
+  /* sombras: mas suaves, calidas (no negro neutro) */
+  --shadow-sm: 0 1px 2px rgba(17, 13, 8, 0.18);
+  --shadow-md: 0 6px 18px rgba(17, 13, 8, 0.22);
+  --shadow-lg: 0 18px 44px -8px rgba(17, 13, 8, 0.38);
+  --shadow-glow: 0 0 32px rgba(229, 37, 45, 0.22);
 
-  --font-sans: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  /* TIPOGRAFIA - el alma del rediseño */
+  --font-display: 'Fraunces', 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+  --font-sans: 'DM Sans', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', 'IBM Plex Mono', ui-monospace, 'SF Mono', Menlo, monospace;
 
-  --container-max: 1200px;
-  --header-height: 72px;
+  --container-max: 1240px;
+  --header-height: 76px;
 
-  --transition-fast: 150ms ease;
-  --transition-base: 250ms ease;
+  --transition-fast: 160ms cubic-bezier(0.2, 0, 0.2, 1);
+  --transition-base: 280ms cubic-bezier(0.2, 0, 0.2, 1);
+  --transition-slow: 560ms cubic-bezier(0.2, 0, 0.2, 1);
 }
